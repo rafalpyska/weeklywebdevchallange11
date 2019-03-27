@@ -1,0 +1,19 @@
+{
+  "name": "weeklywebdevchallange1",
+  "version": "1.0.0",
+  "description": "Weekly Web Dev Challange 1",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Rafał Pyska",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
+}
