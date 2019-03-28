@@ -1,3 +1,27 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+@font-face {
+  font-family: "ChunkFive";
+  src: url('../fonts/Chunkfive.otf')
+}
+.heading {
+  font-family: "ChunkFive";
+  &-header {
+    color: var(--white);
+    font-size: 8.08rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &-color {
+    color: var(--green);
+  }
+  &-paragraph {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 1rem;
+    &:last-of-type {
+      margin-bottom: 5rem;
+    }
+  }
+}

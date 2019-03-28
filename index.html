@@ -10,23 +10,25 @@
     <title>YokNgalm - Weekly Web Dev Challange 11</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__logo">Yok<span class="logo-bold">Ngalam</span></a></li>
+                <li class="nav__item active"><a href="#" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Destination</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Ittinary</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
-            <section class="hero">
-                <h1 class="heading hero__heading"> Lets get lost</h1>
-                <p class="paragraph">Malang will never dissapointed you</p>
-                <p class="paragraph">From every step you took you will be amazed and suddenly fallin love with Malang</p>
-                <button class="button"></button>
-            </section>
-            <div class="overlay"></div>
         </nav>
+        <section class="header__info">
+            <h1 class="heading heading-header"> Lets get <span class="heading-color">lost</span></h1>
+            <p class="heading-paragraph">Malang will never dissapointed you</p>
+            <p class="heading-paragraph">From every step you took you will be amazed and suddenly fallin love with Malang</p>
+            <button class="button">Set ittinery now</button>
+        </section>
+        <div class="overlay"></div>
+    </header>
         <main>
             <section class="city-description">
                 <fiqure class="city-description__image">
@@ -136,7 +138,6 @@
                 </ul>
             </footer>
         </main>
-    </header>
     <script src="js/scripts.js"></script>
 </body>
 </html>

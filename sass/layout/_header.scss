@@ -1,0 +1,18 @@
+.header {
+  background: url('../images/header.jpg') no-repeat center;
+  background-size: cover;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11rem 0;
+  }
+}
+
+.overlay {
+  width: 70%;
+  height: 4rem;
+  margin: 0 auto;
+  background-color: var(--transparent);
+}

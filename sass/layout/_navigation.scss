@@ -1,0 +1,38 @@
+.nav {
+  max-height: 12.2rem;
+  padding: 3.5rem 15rem;
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+    &.active {
+      border: 2px solid var(--white);
+      border-radius: 4rem;
+      font-weight: 800;
+    }
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+  &__logo:link,
+  &__logo:visited {
+    font-size: 2.518rem;
+    color: var(--white);
+  }
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    color: var(--white);
+  }
+}
+
+.logo-bold {
+  font-weight: 800;
+}

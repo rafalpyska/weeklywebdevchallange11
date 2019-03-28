@@ -200,5 +200,8 @@ template {
 }
 
 :root {
-
+ --transparent: rgba(255, 255, 255, .5);
+  --white: rgba(255, 255, 255, .9);
+  --green: rgba(1, 162, 166, 1);
+  --yellow: rgba(255, 255, 166, 1);
 }

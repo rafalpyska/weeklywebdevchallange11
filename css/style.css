@@ -185,8 +185,34 @@ template {
 [hidden] {
   display: none; }
 
+:root {
+  --transparent: rgba(255, 255, 255, .5);
+  --white: rgba(255, 255, 255, .9);
+  --green: rgba(1, 162, 166, 1);
+  --yellow: rgba(255, 255, 166, 1); }
+
 body {
   font-family: 'Lato', sans-serif; }
+
+@font-face {
+  font-family: "ChunkFive";
+  src: url("../fonts/Chunkfive.otf"); }
+
+.heading {
+  font-family: "ChunkFive"; }
+  .heading-header {
+    color: var(--white);
+    font-size: 8.08rem;
+    text-transform: uppercase;
+    margin: 0; }
+  .heading-color {
+    color: var(--green); }
+  .heading-paragraph {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 1rem; }
+    .heading-paragraph:last-of-type {
+      margin-bottom: 5rem; }
 
 .visuallyhidden {
   border: 0;
@@ -200,5 +226,54 @@ body {
   white-space: nowrap; }
 
 .button {
-  background: none;
-  text-transform: uppercase; }
+  background: var(--yellow);
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4rem;
+  padding: 2.5rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 800; }
+
+.header {
+  background: url("../images/header.jpg") no-repeat center;
+  background-size: cover; }
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11rem 0; }
+
+.overlay {
+  width: 70%;
+  height: 4rem;
+  margin: 0 auto;
+  background-color: var(--transparent); }
+
+.nav {
+  max-height: 12.2rem;
+  padding: 3.5rem 15rem; }
+  .nav__list {
+    display: flex;
+    list-style-type: none; }
+  .nav__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem; }
+    .nav__item:not(:last-child) {
+      margin-right: 1.5rem; }
+    .nav__item.active {
+      border: 2px solid var(--white);
+      border-radius: 4rem;
+      font-weight: 800; }
+    .nav__item:first-child {
+      margin-right: auto; }
+  .nav__logo:link, .nav__logo:visited {
+    font-size: 2.518rem;
+    color: var(--white); }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.4rem;
+    color: var(--white); }
+
+.logo-bold {
+  font-weight: 800; }
