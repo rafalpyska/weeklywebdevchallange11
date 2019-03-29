@@ -14,7 +14,7 @@ body {
     margin: 0;
   }
   &-color {
-    color: var(--green);
+    color: var(--green-dark);
   }
   &-paragraph {
     color: var(--white);
@@ -23,5 +23,15 @@ body {
     &:last-of-type {
       margin-bottom: 5rem;
     }
+  }
+  &-primary {
+    font-size: 6rem;
+    color: var(--green-light);
+  }
+}
+.section {
+  &-paragraph {
+    font-size: 1.6rem;
+    color: var(--grey);
   }
 }

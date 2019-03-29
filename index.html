@@ -19,6 +19,7 @@
                 <li class="nav__item"><a href="#" class="nav__link">Ittinary</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                <li class="nav__item user"><a href="#" class="nav__link"><img class="user__image" src="../images/island.jpg" alt=""></a></li>
             </ul>
         </nav>
         <section class="header__info">
@@ -35,25 +36,45 @@
                     <img src="images/svg/city-image.svg" alt="Malang City">
                 </fiqure>
                 <div class="city-description__info">
-                    <h1 class="heading heading-primary">City of <span>Love</span></h1>
-                    <p>Malang is the second largest city in East Java province, Indonesia. It has a history dating back to the ancient
-                    Mataram kingdom. the city is famous for its cool temperature. People in East Java sometimes
-                    call it "Paris" of East Java.</p>
+                    <h1 class="heading heading-primary">City of <span class="heading-color">Love</span></h1>
+                    <p class="section-paragraph">Malang is the second largest city in East Java province, Indonesia.
+                        It has a history dating back to the ancient
+                        Mataram kingdom. the city is famous for its cool temperature. People in East Java sometimes
+                        call it "Paris" of East Java.
+                    </p>
                 </div>
             </section>
             <section class="offer">
-                <div class="offer__destination-info">
-                    <h1 class="heading heading-primary">Des<span>tination</span></h1>
+                <div class="offer__destination">
+                    <div class="offer__destination-info">
+                        <h1 class="heading heading-primary">Des<span class="heading-color">tination</span></h1>
+                        <p class="section-paragraph">Being around by many mountains, Malang not only came with mountain vacation,
+                            but our beach, cultural spot, and Human Interest is worth to experienced.
+                        </p>
+                    </div>
+                    <div class="offer__destination-regulations">
+                    <span class="social__item" aria-hidden="true">
+                    <a href="#">
+                        <svg width="25px" height="25px" viewBox="0 0 438 438" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M218.8,0 C98,0 0,98 0,218.8 C0,339.6 98,437.6 218.8,437.6 C339.6,437.6 437.6,339.6 437.6,218.8 C437.6,98 339.6,0 218.8,0 Z" id="Shape" fill="#C1C1C1" fill-rule="nonzero"></path>
+                            <path d="M249.6,289.2 L240.4,289.2 L240.4,191.2 C240.4,185.6 236,180.8 230,180.8 L188,180.8 C182.4,180.8 177.6,185.2 177.6,191.2 L177.6,212.8 C177.6,218.4 182,223.2 188,223.2 L196.4,223.2 L196.4,289.6 L188,289.6 C182.4,289.6 177.6,294 177.6,300 L177.6,321.6 C177.6,327.2 182,332 188,332 L249.6,332 C255.2,332 260,327.6 260,321.6 L260,300 C260,294 255.2,289.2 249.6,289.2 Z" id="Path" fill="#FFFFFF"></path>
+                            <path d="M194,142.8 C194.8,144.4 195.6,146 196.4,147.2 C197.2,148.4 198.4,149.6 199.2,150.8 C200.4,152 201.6,153.2 203.2,154.4 C204.4,155.2 206,156.4 208,156.8 C209.6,157.6 211.2,158 213.2,158.4 C215.2,158.8 216.8,158.8 218.4,158.8 C220,158.8 222,158.8 223.6,158.4 C225.2,158 226.8,157.6 228,156.8 L228.4,156.8 C230,156 231.6,155.2 233.2,154 C234.4,153.2 235.6,152 236.8,150.8 L237.2,150.4 C238.4,149.2 239.2,148 240,146.8 C240.8,145.6 241.6,144.4 242,142.8 C242,142.4 242,142.4 242.4,142 C243.2,140.4 243.6,138.4 244,136.8 C244.4,135.2 244.4,133.2 244.4,131.6 C244.4,130 244.4,128 244,126.4 C243.6,124.8 243.2,123.2 242.4,121.2 C241.2,118.4 239.6,116 237.6,114 C237.2,113.6 237.2,113.6 236.8,113.2 C235.6,112 234.4,111.2 232.8,110 C231.2,109.2 230,108.4 228.4,107.6 C226.8,106.8 225.2,106.4 223.6,106 C221.6,105.6 220,105.6 218.4,105.6 C216.8,105.6 214.8,105.6 213.2,106 C211.6,106.4 210,106.8 208.4,107.6 L208,107.6 C206.4,108.4 204.8,109.2 203.6,110 C202,111.2 200.8,112 199.6,113.2 C198.4,114.4 197.2,115.6 196.4,116.8 C195.6,118 194.8,119.6 194,121.2 C193.2,122.8 192.8,124.4 192.4,126 C192,128 192,129.6 192,131.2 C192,132.8 192,134.8 192.4,136.4 C192.8,139.6 193.6,141.2 194,142.8 Z" id="Path" fill="#FFFFFF"></path>
+                        </svg>
+                    see basic regulation</a>
+                    </span>
+                    </div>
+                    <div class="offer__destination-search">
+                        <input class="input input__search" type="search" id="places-search" name="search" aria-label="Search destination" placeholder="search destination">
+                        <label for="places-search" class="visuallyhidden">Search Destination</label>
+                        <ul class="offer__list">
+                            <li class="offer__item"><a href="#" class="offer__link">All Place</a></li>
+                            <li class="offer__item">/</li>
+                            <li class="offer__item"><a href="#" class="offer__link">Recommended Place</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="offer__search">
-                    <input class="input input__search" type="search" id="places-search" name="search" aria-label="Search destination" placeholder="search destination">
-                    <label for="places-search" class="visuallyhidden">Search Destination</label>
-                    <ul class="offer__list">
-                        <li class="offer__item"><a href="#" class="offer__link">All Place</a></li>
-                        <li class="offer__item">/</li>
-                        <li class="offer__item"><a href="#" class="offer__link">Recommended Place</a></li>
-                    </ul>
-                </div>
+
+
                 <div class="offer-city-list">
                     <div class="offer-city-list__item offer-city-list__item--big">
                         <figure class="city-image">
@@ -125,17 +146,52 @@
                     <input type="email">
                 </div>
             </section>
-            <footer>
+            <footer class="footer">
                 <ul class="footer__list">
                     <li class="footer__item"><a href="#" class="footer__link">Terms & Condition</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Policy</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
                 </ul>
-                <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
-                </ul>
+                <span class="visuallyhidden">Facebook</span>
+                <span class="social__item" aria-hidden="true">
+                    <a href="https://instagram.com">
+                        <svg class="social__icon" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M24.826,0 C11.137,0 0,11.137 0,24.826 C0,38.514 11.137,49.652 24.826,49.652 C38.514,49.652 49.652,38.514 49.652,24.826 C49.652,11.137 38.516,0 24.826,0 Z M31,25.7 L26.961,25.7 C26.961,32.153 26.961,40.096 26.961,40.096 L20.976,40.096 C20.976,40.096 20.976,32.23 20.976,25.7 L18.131,25.7 L18.131,20.612 L20.976,20.612 L20.976,17.321 C20.976,14.964 22.096,11.281 27.016,11.281 L31.451,11.298 L31.451,16.237 C31.451,16.237 28.756,16.237 28.232,16.237 C27.708,16.237 26.963,16.499 26.963,17.623 L26.963,20.613 L31.523,20.613 L31,25.7 Z" id="Shape"></path>
+                        </svg>
+                </span>
+                <span class="visuallyhidden">Twitter</span>
+                <span class="social__item" aria-hidden="true">
+                    <a href="https://twitter.com">
+                        <svg class="social__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                        <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+			                C49.652,11.137,38.516,0,24.826,0z M35.901,19.144c0.011,0.246,0.017,0.494,0.017,0.742c0,7.551-5.746,16.255-16.259,16.255
+			                c-3.227,0-6.231-0.943-8.759-2.565c0.447,0.053,0.902,0.08,1.363,0.08c2.678,0,5.141-0.914,7.097-2.446
+			                c-2.5-0.046-4.611-1.698-5.338-3.969c0.348,0.066,0.707,0.103,1.074,0.103c0.521,0,1.027-0.068,1.506-0.199
+			                c-2.614-0.524-4.583-2.833-4.583-5.603c0-0.024,0-0.049,0.001-0.072c0.77,0.427,1.651,0.685,2.587,0.714
+			                c-1.532-1.023-2.541-2.773-2.541-4.755c0-1.048,0.281-2.03,0.773-2.874c2.817,3.458,7.029,5.732,11.777,5.972
+			                c-0.098-0.419-0.147-0.854-0.147-1.303c0-3.155,2.558-5.714,5.713-5.714c1.644,0,3.127,0.694,4.171,1.804
+			                c1.303-0.256,2.523-0.73,3.63-1.387c-0.43,1.335-1.333,2.454-2.516,3.162c1.157-0.138,2.261-0.444,3.282-0.899
+			                C37.987,17.334,37.018,18.341,35.901,19.144z"/>
+                        </svg>
+                    </a>
+                </span>
+                <span class="visuallyhidden">Instagram</span>
+                <span class="social__item" aria-hidden="true">
+                    <a href="https://instagram.com">
+                        <svg class="social__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                            <path d="M24.825,29.796c2.739,0,4.972-2.229,4.972-4.97c0-1.082-0.354-2.081-0.94-2.897c-0.903-1.252-2.371-2.073-4.029-2.073
+				                c-1.659,0-3.126,0.82-4.031,2.072c-0.588,0.816-0.939,1.815-0.94,2.897C19.854,27.566,22.085,29.796,24.825,29.796z"/>
+			                <polygon points="35.678,18.746 35.678,14.58 35.678,13.96 35.055,13.962 30.891,13.975 30.907,18.762 			"/>
+			                <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+				                C49.652,11.137,38.516,0,24.826,0z M38.945,21.929v11.56c0,3.011-2.448,5.458-5.457,5.458H16.164
+				                c-3.01,0-5.457-2.447-5.457-5.458v-11.56v-5.764c0-3.01,2.447-5.457,5.457-5.457h17.323c3.01,0,5.458,2.447,5.458,5.457V21.929z"/>
+			                <path d="M32.549,24.826c0,4.257-3.464,7.723-7.723,7.723c-4.259,0-7.722-3.466-7.722-7.723c0-1.024,0.204-2.003,0.568-2.897
+				                h-4.215v11.56c0,1.494,1.213,2.704,2.706,2.704h17.323c1.491,0,2.706-1.21,2.706-2.704v-11.56h-4.217
+				                C32.342,22.823,32.549,23.802,32.549,24.826z"/>
+                        </svg>
+                    </a>
+                </span>
+                <p class="footer__copyrights">copyright&copy;YokMalang. All rights reserved. 2015</p>
             </footer>
         </main>
     <script src="js/scripts.js"></script>

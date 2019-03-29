@@ -1,0 +1,47 @@
+.city-description {
+  display: flex;
+  padding: 0 13.5rem;
+  &__image {
+    padding: 10rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+  }
+}
+.offer {
+  background-color: var(--background);
+  &__destination {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 23.5rem;
+    &-info {
+      width: 50%;
+    }
+    &-regulations {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+    }
+    &-search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+}
+
+.newsletter {
+  display: flex;
+  &__subscribe {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -8,7 +8,7 @@
   &__item {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
@@ -16,6 +16,13 @@
       border: 2px solid var(--white);
       border-radius: 4rem;
       font-weight: 800;
+      transition: .3s all;
+      &:hover {
+        border-color: var(--yellow);
+        & .nav__link {
+          color: var(--yellow);
+        }
+      }
     }
     &:first-child {
       margin-right: auto;
@@ -30,9 +37,19 @@
   &__link:visited {
     font-size: 1.4rem;
     color: var(--white);
+    transition: .2s all;
+  }
+  &__link:hover {
+    color: var(--yellow);
   }
 }
-
 .logo-bold {
   font-weight: 800;
+}
+.user {
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
 }
