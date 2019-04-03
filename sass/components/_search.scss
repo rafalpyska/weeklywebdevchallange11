@@ -1,7 +1,13 @@
 .input {
   &__search {
-    padding: .9rem 1rem;
+    padding: .9rem 4rem;
     border: 1px solid var(--border);
     border-radius: 2rem;
+    background: url('../images/search.png') no-repeat 1rem;
+  }
+  &::placeholder {
+    font-size: 1.4rem;
+    color: rgba(181, 181, 181, 1);
+    font-style: italic;
   }
 }

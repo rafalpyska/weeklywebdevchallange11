@@ -6,7 +6,17 @@ body {
   src: url('../fonts/Chunkfive.otf')
 }
 .heading {
-  font-family: "ChunkFive";
+  &-primary {
+    font-family: "ChunkFive";
+    font-size: 6rem;
+    color: var(--green-light);
+  }
+  &-secondary {
+    font-size: 3rem;
+    font-weight: 100;
+    color: var(--green-dark);
+    margin: 1rem 0;
+  }
   &-header {
     color: var(--white);
     font-size: 8.08rem;
@@ -24,14 +34,15 @@ body {
       margin-bottom: 5rem;
     }
   }
-  &-primary {
-    font-size: 6rem;
-    color: var(--green-light);
-  }
 }
 .section {
   &-paragraph {
     font-size: 1.6rem;
-    color: var(--grey);
+    color: var(--gray-dark);
+  }
+}
+.offer {
+  &-paragraph {
+    font-size: 1.6rem;
   }
 }
