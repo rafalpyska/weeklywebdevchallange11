@@ -2,11 +2,13 @@
   display: flex;
   padding: 0 13.5rem;
   &__image {
+    width: 45%;
     padding: 10rem;
   }
   &__info {
     display: flex;
     flex-direction: column;
+    width: 55%;
     padding: 10rem;
   }
 }
@@ -17,7 +19,7 @@
     flex-wrap: wrap;
     padding: 0 23.5rem;
     &__container {
-      
+      width: 100%;
     }
     &-info {
       display: flex;
