@@ -9,6 +9,7 @@
     width: 50%;
     &:last-of-type {
       justify-content: flex-end;
+      list-style-type: none;
     }
   }
   &__item {
@@ -22,7 +23,9 @@
   }
   &__copyrights {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     color: var(--gray-light);
   }
