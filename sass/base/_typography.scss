@@ -1,6 +1,11 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+*::placeholder {
+  font-size: 1.4rem;
+  color: rgba(181, 181, 181, 1);
+  font-style: italic;
+}
 @font-face {
   font-family: "ChunkFive";
   src: url('../fonts/Chunkfive.otf')
@@ -9,12 +14,12 @@ body {
   &-primary {
     font-family: "ChunkFive";
     font-size: 6rem;
-    color: var(--green-light);
+    color: var(--teal-light);
   }
   &-secondary {
     font-size: 3rem;
     font-weight: 100;
-    color: var(--green-dark);
+    color: var(--teal-dark);
     margin: 1rem 0;
   }
   &-header {
@@ -24,14 +29,15 @@ body {
     margin: 0;
   }
   &-color {
-    color: var(--green-dark);
+    color: var(--teal-dark);
   }
   &-paragraph {
     color: var(--white);
-    font-size: 1.8rem;
-    &:last-of-type {
-      margin-bottom: 5rem;
-    }
+    font-size: 1.7rem;
+  }
+  &-newsletter {
+    color: var(--white);
+    margin: 0;
   }
 }
 .paragraph {
