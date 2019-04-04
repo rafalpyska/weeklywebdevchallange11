@@ -225,10 +225,12 @@ body {
 
 .heading-paragraph {
   color: var(--white);
-  font-size: 1.8rem;
-  margin: 1rem; }
+  font-size: 1.8rem; }
   .heading-paragraph:last-of-type {
     margin-bottom: 5rem; }
+
+.paragraph {
+  line-height: 4rem; }
 
 .section-paragraph {
   font-size: 1.6rem;
@@ -358,6 +360,9 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between; }
+    .offer__destination-content {
+      width: 55%;
+      margin-bottom: 6.5rem; }
     .offer__destination-search {
       display: flex;
       justify-content: space-between;
@@ -383,36 +388,61 @@ body {
     color: var(--gray-light); }
   .offer-city-list {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 51.5rem auto;
     padding: 0 13.5rem; }
     .offer-city-list__link {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       font-size: 1.6rem;
       color: var(--white); }
   .offer-city-list__item {
-    display: flex; }
+    display: flex;
+    width: 100%; }
     .offer-city-list__item:first-child {
       grid-column: 1 / -1; }
     .offer-city-list__item:nth-child(2) {
       grid-column: 1 / 8; }
     .offer-city-list__item:last-child {
       grid-column: 8 / 13; }
-  .offer-city-image {
-    width: 100%; }
-    .offer-city-image--big {
-      width: 60%; }
-    .offer-city-image--small {
-      width: 55%; }
+    .offer-city-list__item--big {
+      justify-content: flex-end;
+      background: url("../images/image.jpg");
+      background-size: 100% 100%; }
+    .offer-city-list__item--small {
+      justify-content: space-between;
+      background: url("../images/image2.jpg");
+      background-size: 100% 100%; }
+    .offer-city-list__item--tiny {
+      justify-content: center;
+      align-items: center;
+      background: url("../images/island.jpg");
+      background-size: 100% 100%; }
   .offer-city-description {
     padding: 4rem;
-    line-height: 3rem;
     background-color: var(--transparent); }
     .offer-city-description--big {
       width: 40%; }
     .offer-city-description--small {
-      width: 45%; }
+      width: 100%; }
+  .offer-overlay {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6rem 6rem 0 5rem; }
+    .offer-overlay--big {
+      width: 40.5%; }
+    .offer-overlay--small {
+      width: 50%; }
+
+.overlay-rounded {
+  display: flex;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem; }
 
 .image {
   width: 100%;

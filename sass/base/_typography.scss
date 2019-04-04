@@ -29,11 +29,13 @@ body {
   &-paragraph {
     color: var(--white);
     font-size: 1.8rem;
-    margin: 1rem;
     &:last-of-type {
       margin-bottom: 5rem;
     }
   }
+}
+.paragraph {
+  line-height: 4rem;
 }
 .section {
   &-paragraph {

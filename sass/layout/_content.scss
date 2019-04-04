@@ -26,6 +26,10 @@
       align-items: center;
       justify-content: space-between;
     }
+    &-content {
+      width: 55%;
+      margin-bottom: 6.5rem;
+    }
     &-search {
       display: flex;
       justify-content: space-between;
@@ -65,18 +69,21 @@
   &-city {
     &-list {
       display: grid;
-      grid-gap: 2rem;
+      grid-gap: 3rem;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 51.5rem auto;
       padding: 0 13.5rem;
       &__link {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         font-size: 1.6rem;
         color: var(--white);
       }
     }
     &-list__item {
       display: flex;
+      width: 100%;
       &:first-child {
         grid-column: 1 / -1;
       }
@@ -87,35 +94,55 @@
         grid-column: 8 / 13;
       }
       &--big {
-
+        justify-content: flex-end;
+        background: url('../images/image.jpg');
+        background-size: 100% 100%;
       }
       &--small {
-
+        justify-content: space-between;
+        background: url('../images/image2.jpg');
+        background-size: 100% 100%;
       }
       &--tiny {
-
-      }
-    }
-    &-image {
-      width: 100%;
-      &--big {
-        width: 60%;
-      }
-      &--small {
-        width: 55%;
+        justify-content: center;
+        align-items: center;
+        background: url('../images/island.jpg');
+        background-size: 100% 100%;
       }
     }
     &-description {
       padding: 4rem;
-      line-height: 3rem;
       background-color: var(--transparent);
       &--big {
         width: 40%;
       }
       &--small {
-        width: 45%;
+        width: 100%;
       }
     }
+  }
+  &-overlay {
+    height: 100%;
+    background: rgba(255, 255, 255, .95);
+    padding: 6rem 6rem 0 5rem;
+    &--big {
+      width: 40.5%;
+    }
+    &--small {
+      width: 50%;
+    }
+
+  }
+
+}
+.overlay {
+  &-rounded {
+    display: flex;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
   }
 }
 .image {

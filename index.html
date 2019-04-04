@@ -24,8 +24,8 @@
         </nav>
         <section class="header__info">
             <h1 class="heading heading-header"> Lets get <span class="heading-color">lost</span></h1>
-            <p class="heading-paragraph">Malang will never dissapointed you</p>
-            <p class="heading-paragraph">From every step you took you will be amazed and suddenly fallin love with Malang</p>
+            <p class="paragraph heading-paragraph">Malang will never dissapointed you</p>
+            <p class="paragraph heading-paragraph">From every step you took you will be amazed and suddenly fallin love with Malang</p>
             <button class="btn btn__header">Set ittinery now</button>
         </section>
         <div class="overlay"></div>
@@ -37,7 +37,7 @@
                 </fiqure>
                 <div class="city-description__info">
                     <h1 class="heading heading-primary">City of <span class="heading-color">Love</span></h1>
-                    <p class="section-paragraph">Malang is the second largest city in East Java province, Indonesia.
+                    <p class="paragraph section-paragraph">Malang is the second largest city in East Java province, Indonesia.
                         It has a history dating back to the ancient
                         Mataram kingdom. the city is famous for its cool temperature. People in East Java sometimes
                         call it "Paris" of East Java.
@@ -60,9 +60,11 @@
                             </a>
                         </span>
                         </div>
-                        <p class="section-paragraph">Being around by many mountains, Malang not only came with mountain vacation,
-                            but our beach, cultural spot, and Human Interest is worth to experienced.
-                        </p>
+                        <div class="offer__destination-content">
+                            <p class="paragraph section-paragraph">Being around by many mountains, Malang not only came with mountain vacation,
+                                but our beach, cultural spot, and Human Interest is worth to experienced.
+                            </p>
+                        </div>
                     </div>
                     <div class="offer__destination-search">
                         <input class="input input__search" type="search" id="places-search" name="search" aria-label="Search destination" placeholder="search destination">
@@ -76,35 +78,32 @@
                 </div>
                 <div class="offer-city-list">
                     <div class="offer-city-list__item offer-city-list__item--big">
-                        <figure class="offer-city-image--big">
-                            <a class="offer-city-list__link" href="#"><img src="images/image.jpg" alt="Batu" class="image"><span class="image-text">see more -></span></a>
-                        </figure>
-                        <div class="offer-city-description offer-city-description--big">
+                        <a class="offer-city-list__link" href="#">see more -></a>
+                        <div class="offer-overlay offer-overlay--big">
                             <img src="images/svg/big-wheel.svg" alt="">
                             <h2 class="heading heading-secondary">Batu</h2>
-                            <p class="offer-paragraph">is a city located in East Java Province of Indonesia. It is situated about 20 km to the northwest
-                            of Malang. Formerly, it was a part of Malang Regency; but in 2001, Batu became an independent city.
-                            A population of 190,000 people, it lies on the southern slopes of Gunung Welirang. Its population
-                            largerly consists of Javanese.</p>
-                        </div>
-                    </div>
-                    <div class="offer-city-list__item offer-city-list__item--small">
-                        <div class="offer-city-description offer-city-description--small">
-                            <img src="images/svg/mountains.svg" alt="">
-                            <h2 class="heading heading-secondary">Batu</h2>
-                            <p class="offer-paragraph">is a city located in East Java Province of Indonesia. It is situated about 20 km to the northwest
+                            <p class="paragraph offer-paragraph">is a city located in East Java Province of Indonesia. It is situated about 20 km to the northwest
                                 of Malang. Formerly, it was a part of Malang Regency; but in 2001, Batu became an independent city.
                                 A population of 190,000 people, it lies on the southern slopes of Gunung Welirang. Its population
                                 largerly consists of Javanese.</p>
                         </div>
-                        <figure class="offer-city-image--small">
-                            <a class="offer-city-list__link" href="#"><img src="images/image2.jpg" alt="Bromo" class="image"><span class="image-text">see more -></span></a>
-                        </figure>
+                    </div>
+                    <div class="offer-city-list__item offer-city-list__item--small">
+                        <div class="offer-overlay offer-overlay--small">
+                            <img src="images/svg/mountains.svg" alt="">
+                            <h2 class="heading heading-secondary">Bromo</h2>
+                            <p class="paragraph offer-paragraph">Mount Bromo is an active volcano and part of the Tengger massif, in East
+                                Java, Indonesia. At 2,329 metres (7,641 ft) it is not the highest peak of the massif, but is the most
+                                well known
+                            </p>
+                        </div>
+                        <a class="offer-city-list__link" href="#">see more -></a>
                     </div>
                     <div class="offer-city-list__item offer-city-list__item--tiny">
-                        <figure class="offer-city-image">
-                            <a class="offer-city-list__link" href="#"><img class="image" src="images/island.jpg" alt=""><span class="image-text">see more -></span></a>
-                        </figure>
+                        <div class="overlay-rounded">
+                            <object type="image/svg+xml" data="images/svg/island.svg"></object>
+                        </div>
+                        <a class="offer-city-list__link" href="#">see more -></a>
                     </div>
                 </div>
                 <div class="pagination"></div>
