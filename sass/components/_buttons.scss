@@ -1,0 +1,57 @@
+.btn {
+  text-transform: uppercase;
+  border: 0;
+  font-weight: 800;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.6rem;
+  &__header {
+    background: var(--yellow);
+    border-radius: 4rem;
+    margin-top: 5rem;
+    padding: 2.5rem 2rem;
+    transition: .3s all;
+    &:hover {
+      padding: 2.5rem 3rem;
+    }
+  }
+  &__pdf {
+    background: var(--green-light);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all;
+    &:hover {
+      padding: 2.5rem 3rem;
+    }
+  }
+  &__print {
+    background: var(--teal-dark);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all;
+    &:hover {
+      padding: 2.5rem 3rem;
+    }
+  }
+  &__submit {
+    background: var(--green-light);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all;
+    margin-top: 1.5rem;
+    width: 30%;
+    align-self: end;
+    &:hover {
+      padding: 2.5rem 3rem;
+    }
+  }
+  &__offer {
+    color: var(--gray-light);
+    &.active {
+      color: rgba(119, 119, 119, 1);
+    }
+  }
+}

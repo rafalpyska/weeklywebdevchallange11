@@ -189,6 +189,7 @@ template {
   --transparent: rgba(255, 255, 255, .8);
   --white: rgba(255, 255, 255, .9);
   --teal-dark: rgba(1, 162, 166, 1);
+  --teal-transparent: rgba(1, 162, 166, .7);
   --teal-light: rgba(41, 217, 194, 1);
   --yellow: rgba(255, 255, 166, 1);
   --gray-dark: rgba(119, 119, 119, 1);
@@ -234,6 +235,18 @@ body {
   color: var(--white);
   font-size: 1.7rem; }
 
+.heading-contact {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  z-index: 2;
+  margin-bottom: 10rem; }
+  .heading-contact-details {
+    font-size: 4.4rem;
+    font-weight: 100;
+    color: var(--white);
+    margin-bottom: 6rem; }
+
 .heading-newsletter {
   color: var(--white);
   margin: 0; }
@@ -264,14 +277,42 @@ body {
   border: 0;
   font-weight: 800;
   cursor: pointer;
-  background: transparent; }
+  background: transparent;
+  font-size: 1.6rem; }
   .btn__header {
     background: var(--yellow);
     border-radius: 4rem;
+    margin-top: 5rem;
     padding: 2.5rem 2rem;
-    transition: .3s all;
-    margin-top: 5rem; }
+    transition: .3s all; }
     .btn__header:hover {
+      padding: 2.5rem 3rem; }
+  .btn__pdf {
+    background: var(--green-light);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all; }
+    .btn__pdf:hover {
+      padding: 2.5rem 3rem; }
+  .btn__print {
+    background: var(--teal-dark);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all; }
+    .btn__print:hover {
+      padding: 2.5rem 3rem; }
+  .btn__submit {
+    background: var(--green-light);
+    border-radius: 4rem;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    transition: .3s all;
+    margin-top: 1.5rem;
+    width: 30%;
+    align-self: end; }
+    .btn__submit:hover {
       padding: 2.5rem 3rem; }
   .btn__offer {
     color: var(--gray-light); }
@@ -284,15 +325,17 @@ body {
   border-radius: 2rem;
   background: url("../images/search.png") no-repeat 1rem; }
 
-.newsletter__email {
+.input {
   display: flex;
   justify-content: center;
-  height: 6rem;
-  width: 50%;
+  border-radius: .65rem;
   padding: 1rem 3rem;
-  font-size: 1.6rem;
-  color: var(--gray-dark);
-  border-radius: .5rem;
+  font-size: 1.6rem; }
+
+.newsletter__email {
+  height: 6rem;
+  width: 63%;
+  color: var(--gray-light);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border: 1px solid var(--gray-dark);
@@ -304,12 +347,33 @@ body {
   font-size: 5rem;
   font-weight: 100;
   color: var(--white);
-  border-radius: .5rem;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border: 1px solid var(--gray-dark);
   border-left: 0;
   background-color: var(--teal-dark); }
+
+.contact__input {
+  height: 5.6rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-light); }
+
+.contact__fieldset {
+  display: flex;
+  padding: 0;
+  border: 0; }
+
+.contact__company {
+  width: 48%;
+  margin-right: 1rem; }
+
+.contact__subject {
+  width: 48%;
+  margin-left: 1rem; }
+
+.contact__message {
+  height: 10rem;
+  resize: none; }
 
 .header {
   background: url("../images/header.jpg") no-repeat center;
@@ -484,6 +548,39 @@ body {
     bottom: 1.5rem;
     right: 1.5rem; }
 
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 6rem 13.5rem;
+  background: url("../images/map.jpg");
+  background-position: 100% 100%; }
+  .contact:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--teal-transparent); }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 75%; }
+    .contact__form-container {
+      width: 50%;
+      z-index: 2; }
+  .contact__info {
+    width: 50%;
+    z-index: 2; }
+  .contact__list {
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 800;
+    list-style-type: none; }
+  .contact__item:not(:last-child) {
+    margin-bottom: 1.5rem; }
+
 .newsletter {
   display: flex;
   width: 100%;
@@ -492,17 +589,16 @@ body {
   .newsletter__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 50%;
-    padding: 6rem 0;
+    padding: 5.5rem 13.5rem;
     background-color: var(--green-light); }
   .newsletter__subscribe {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 50%;
     margin-left: -3.6rem;
-    padding: 6rem 0;
+    padding: 5.5rem 10.6rem;
     background-color: var(--green-dark);
     transform: skewX(20deg); }
     .newsletter__subscribe > * {

@@ -23,7 +23,7 @@
             </ul>
         </nav>
         <section class="header__info">
-            <h1 class="heading heading-header"> Lets get <span class="heading-color">lost</span></h1>
+            <h1 class="heading-header"> Lets get <span class="heading-color">lost</span></h1>
             <p class="paragraph heading-paragraph">Malang will never dissapointed you</p>
             <p class="paragraph heading-paragraph">From every step you took you will be amazed and suddenly fallin love with Malang</p>
             <button class="btn btn__header">Set ittinery now</button>
@@ -36,7 +36,7 @@
                     <object type="image/svg+xml" data="images/svg/city-image.svg"></object>
                 </fiqure>
                 <div class="city-description__info">
-                    <h1 class="heading heading-primary">City of <span class="heading-color">Love</span></h1>
+                    <h1 class="heading-primary">City of <span class="heading-color">Love</span></h1>
                     <p class="paragraph section-paragraph">Malang is the second largest city in East Java province, Indonesia.
                         It has a history dating back to the ancient
                         Mataram kingdom. the city is famous for its cool temperature. People in East Java sometimes
@@ -48,7 +48,7 @@
                 <div class="offer__destination">
                     <div class="offer__destination__container">
                         <div class="offer__destination-info">
-                            <h1 class="heading heading-primary">Des<span class="heading-color">tination</span></h1>
+                            <h1 class="heading-primary">Des<span class="heading-color">tination</span></h1>
                             <span aria-hidden="true">
                             <a href="#" class="offer-info__link">
                                 <svg class="offer-info__icon" width="25px" height="25px" viewBox="0 0 438 438" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -81,7 +81,7 @@
                         <a class="offer-city-list__link" href="#">see more -></a>
                         <div class="offer-overlay offer-overlay--big">
                             <img src="images/svg/big-wheel.svg" alt="">
-                            <h2 class="heading heading-secondary">Batu</h2>
+                            <h2 class="heading-secondary">Batu</h2>
                             <p class="paragraph offer-paragraph">is a city located in East Java Province of Indonesia. It is situated about 20 km to the northwest
                                 of Malang. Formerly, it was a part of Malang Regency; but in 2001, Batu became an independent city.
                                 A population of 190,000 people, it lies on the southern slopes of Gunung Welirang. Its population
@@ -91,7 +91,7 @@
                     <div class="offer-city-list__item offer-city-list__item--small">
                         <div class="offer-overlay offer-overlay--small">
                             <img src="images/svg/mountains.svg" alt="">
-                            <h2 class="heading heading-secondary">Bromo</h2>
+                            <h2 class="heading-secondary">Bromo</h2>
                             <p class="paragraph offer-paragraph">Mount Bromo is an active volcano and part of the Tengger massif, in East
                                 Java, Indonesia. At 2,329 metres (7,641 ft) it is not the highest peak of the massif, but is the most
                                 well known
@@ -111,38 +111,55 @@
             <section class="trip-planner__container">
                 <div class="trip-planner">
                     <div class="trip-planner__header">
-                        <h3 class="heading heading-tertiary">Your Ittinery Title Here</h3>
+                        <h3 class="heading-tertiary">Your Ittinery Title Here</h3>
                     </div>
                     <div class="trip-planner__body">
 
                     </div>
-                    <button>Save as pdf</button>
-                    <button>Print</button>
+                    <button class="btn btn__pdf">Save as pdf</button>
+                    <button class="btn btn__print">Print</button>
                 </div>
                 <div class="destination-list">
 
                 </div>
             </section>
             <section class="contact">
-                <h1 class="heading heading-primary">Contact</h1>
-                <div class="form">
-                    <form action="">
-
+                <h1 class="heading-primary heading-contact">Contact</h1>
+                <div class="contact__form-container">
+                    <form class="contact__form" action="">
+                        <label class="visuallyhidden" for="contact-email">Your email address</label>
+                        <input class="input contact__input contact__email" id="contact-email" name="contact-email" type="email" placeholder="Your email">
+                        <fieldset class="contact__fieldset">
+                            <label class="visuallyhidden" for="contact-company">Your company</label>
+                            <input class="input contact__input contact__company" id="contact-company" name="contact-company" type="text" placeholder="Company">
+                            <label class="visuallyhidden" for="contact-subject">Subject of your message</label>
+                            <input class="input contact__input contact__subject" id="contact-subject" name="contact-subject" type="text" placeholder="Subject">
+                        </fieldset>
+                        <label class="visuallyhidden" for="contact-message">Type your message here</label>
+                        <textarea class="input contact__input contact__message" name="contact-message" id="contact-message" cols="30" rows="30" placeholder="Your message"></textarea>
+                        <label class="visuallyhidden" for="contact-submit">Submit your message</label>
+                        <input id="contact-submit" class="btn btn__submit" name="contact-submit" type="submit" value="Send Message">
                     </form>
-                    <div class="contact__info">
-
-                    </div>
                 </div>
-                <div class="overlay"></div>
+                <div class="contact__info">
+                    <h2 class="heading-contact-details">You Can Find us Here</h2>
+                    <ul class="contact__list">
+                        <li class="contact__item">Jl.Danau Bratan sekian nomer sekian, Sawojajar Malang</li>
+                        <li class="contact__item">(+62) 8816723812</li>
+                        <li class="contact__item">(+62) 8816724234</li>
+                    </ul>
+                </div>
             </section>
             <section class="newsletter">
                 <div class="newsletter__info">
-                    <h1 class="heading heading-primary heading-newsletter">Keep in Touch</h1>
+                    <h1 class="heading-primary heading-newsletter">Keep in Touch</h1>
                     <p class="paragraph heading-paragraph">We will give you latest information about Malang</p>
                 </div>
                 <div class="newsletter__subscribe">
-                    <input class="newsletter__email" type="email" placeholder="Type Email Here for Subscribe">
-                    <input class="newsletter__submit" type="submit" value=">">
+                    <label class="visuallyhidden" for="newsletter-email">Type email here for newsletter subscribe</label>
+                    <input id="newsletter-email" name="email" class="input newsletter__email" type="email" placeholder="Type Email Here for Subscribe">
+                    <label class="visuallyhidden" for="newsletter-submit">Submit</label>
+                    <input id="newsletter-submit" name="newsletter-submit" class="input newsletter__submit" type="submit" value=">">
                 </div>
             </section>
             <footer class="footer">
