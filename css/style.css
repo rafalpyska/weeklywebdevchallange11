@@ -308,10 +308,9 @@ body {
     border-radius: 4rem;
     padding: 2.5rem 2rem;
     color: var(--white);
-    transition: .3s all;
     margin-top: 1.5rem;
-    width: 30%;
-    align-self: end; }
+    align-self: end;
+    transition: .3s all; }
     .btn__submit:hover {
       padding: 2.5rem 3rem; }
   .btn__offer {
@@ -360,6 +359,7 @@ body {
 
 .contact__fieldset {
   display: flex;
+  width: 100%;
   padding: 0;
   border: 0; }
 
