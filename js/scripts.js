@@ -1,45 +1,39 @@
-(function() {
-    let nav = document.querySelector(".navigation__expanded");
-    let navigation__toggle = document.querySelector(".navigation__toggle");
-    let nav__list = document.querySelector(".nav__list");
+(function () {
+    document.querySelector('.trip-planner__datapicker').valueAsDate = new Date();
 
-    navigation__toggle.addEventListener("click", function () {
-        nav.classList.toggle("navigation__expanded--visible");
-        if(nav.classList.contains("navigation__expanded--visible")) {
-            nav__list.setAttribute('aria-expanded', true);
-       } else {
-            nav__list.setAttribute("aria-expanded", false);
+    const items = document.querySelectorAll('.trip-planner__destination--filled');
+    const itemsLength = items.length;
+    const empty = document.querySelectorAll('.trip-planner__destination--empty');
+
+    for (let i = 0; i < itemsLength; i++) {
+        items[i].setAttribute('draggable', 'true');
+    }
+
+    let item = null;
+
+    document.addEventListener('dragstart', function(e) {
+        item = e.target;
+        item.style.opacity = '0.4';
+        item.classList.add('hold');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text', '');
+
+    }, false);
+
+    document.addEventListener('dragover', function(e) {
+        if(item) {
+            e.preventDefault();
         }
     }, false);
+
+    document.addEventListener('drop', function(e) {
+        if(e.target.classList.contains('trip-planner__destination--empty')) {
+            e.target.appendChild(item);
+            e.preventDefault();
+        }
+    }, false);
+    document.addEventListener('dragend', function(e) {
+        item.style.opacity = '1';
+        item = null;
+    }, false);
 }());
-function smoothScroll(target, duration) {
-    target = document.querySelector(target);
-    let targetPosition = target.getBoundingClientRect().top;
-    let startPosition = window.pageYOffset;
-    let distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function scrollAnimation(currentTime) {
-        if(startTime === null) {
-            startTime = currentTime;
-        }
-        let timeElapsed = currentTime - startTime;
-        let run = ease(timeElapsed, startPosition, targetPosition, duration);
-        window.scrollTo(0, run);
-        if(timeElapsed < duration) {
-            requestAnimationFrame(scrollAnimation);
-        }
-    }
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-    requestAnimationFrame(scrollAnimation);
-}
-
-let scrollDown = document.querySelector('.scroll-down');
-scrollDown.addEventListener('click', function() {
-    smoothScroll('.accomplishments', 1000);
-}, false);
