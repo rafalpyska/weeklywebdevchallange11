@@ -85,6 +85,11 @@
         font-weight: 800;
         color: var(--white);
         background-image: radial-gradient(circle at bottom right, black, transparent 23%);
+        opacity: .85;
+        transition: .3s all;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
     &-list__item {

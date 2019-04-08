@@ -1,5 +1,6 @@
 (function () {
-    document.querySelector('.trip-planner__datapicker').valueAsDate = new Date();
+    const datePicker = document.querySelector('.trip-planner__datepicker');
+    datePicker.valueAsDate = new Date();
 
     const items = document.querySelectorAll('.trip-planner__destination--filled');
     const itemsLength = items.length;

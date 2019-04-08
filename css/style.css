@@ -370,6 +370,13 @@ body {
   border-left: 0;
   background-color: var(--teal-dark); }
 
+.trip-planner {
+  font-size: 1.6rem; }
+  .trip-planner__datepicker {
+    background: none;
+    border: 0;
+    color: var(--teal-dark); }
+
 .contact__input {
   height: 5.6rem;
   margin-bottom: 2rem;
@@ -517,7 +524,11 @@ body {
       text-align: end;
       font-weight: 800;
       color: var(--white);
-      background-image: radial-gradient(circle at bottom right, black, transparent 23%); }
+      background-image: radial-gradient(circle at bottom right, black, transparent 23%);
+      opacity: .85;
+      transition: .3s all; }
+      .offer-city-list__link:hover {
+        opacity: 1; }
   .offer-city-list__item {
     display: flex;
     width: 100%; }

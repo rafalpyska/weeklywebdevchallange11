@@ -29,6 +29,14 @@
     background-color: var(--teal-dark);
   }
 }
+.trip-planner {
+  font-size: 1.6rem;
+  &__datepicker {
+    background: none;
+    border: 0;
+    color: var(--teal-dark);
+  }
+}
 .contact {
   &__input {
     height: 5.6rem;
