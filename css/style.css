@@ -297,9 +297,17 @@ body {
     transition: .3s all; }
     .btn__header:hover {
       padding: 2.5rem 3rem; }
+  .btn__pagination {
+    padding: 0 1.5rem;
+    font-size: 1.8rem;
+    color: var(--gray-light); }
+    .btn__pagination--active {
+      font-size: 2.4rem;
+      color: var(--teal-dark); }
   .btn__pdf {
     background: var(--green-light);
     border-radius: 4rem;
+    margin-right: 3rem;
     padding: 2.5rem 2rem;
     color: var(--white);
     transition: .3s all; }
@@ -338,7 +346,7 @@ body {
   display: flex;
   justify-content: center;
   border-radius: .65rem;
-  padding: 1rem 3rem;
+  padding: 1rem 3.5rem;
   font-size: 1.6rem; }
 
 .newsletter__email {
@@ -500,10 +508,16 @@ body {
     padding: 0 13.5rem; }
     .offer-city-list__link {
       display: flex;
+      width: 59.5%;
       flex-direction: column;
       justify-content: flex-end;
+      padding-right: 1.5rem;
+      padding-bottom: 1.5rem;
       font-size: 1.6rem;
-      color: var(--white); }
+      text-align: end;
+      font-weight: 800;
+      color: var(--white);
+      background-image: radial-gradient(circle at bottom right, black, transparent 23%); }
   .offer-city-list__item {
     display: flex;
     width: 100%; }
@@ -522,8 +536,8 @@ body {
       background: url("../images/image2.jpg");
       background-size: 100% 100%; }
     .offer-city-list__item--tiny {
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-end;
+      position: relative;
       background: url("../images/island.jpg");
       background-size: 100% 100%; }
   .offer-city-description {
@@ -540,17 +554,26 @@ body {
     .offer-overlay--big {
       width: 40.5%; }
     .offer-overlay--small {
-      width: 50%; }
+      width: 50%;
+      padding: 3rem 6rem 3rem 5rem; }
   .offer-pagination {
-    margin-top: 7rem; }
+    display: flex;
+    justify-content: center;
+    padding: 7rem 0; }
 
 .overlay-rounded {
   display: flex;
   justify-content: center;
-  background: var(--white);
-  border-radius: 50%;
+  position: absolute;
   width: 15rem;
-  height: 15rem; }
+  height: 15rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: var(--white);
+  border-radius: 50%; }
 
 .image {
   width: 100%;
@@ -580,11 +603,15 @@ body {
     border-top-left-radius: .75rem;
     border-top-right-radius: .75rem; }
   .trip-planner__body {
+    margin-bottom: 1.5rem;
     padding: 3rem 4rem;
     background-color: var(--yellow); }
   .trip-planner__date {
     display: flex;
     justify-content: space-between; }
+  .trip-planner__controls {
+    display: flex;
+    justify-content: flex-end; }
   .trip-planner__destination-list {
     width: calc(50% - 1.75rem); }
   .trip-planner__destination--empty {

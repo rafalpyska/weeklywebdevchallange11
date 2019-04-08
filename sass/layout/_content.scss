@@ -75,10 +75,16 @@
       padding: 0 13.5rem;
       &__link {
         display: flex;
+        width: 59.5%;
         flex-direction: column;
         justify-content: flex-end;
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
         font-size: 1.6rem;
+        text-align: end;
+        font-weight: 800;
         color: var(--white);
+        background-image: radial-gradient(circle at bottom right, black, transparent 23%);
       }
     }
     &-list__item {
@@ -104,8 +110,8 @@
         background-size: 100% 100%;
       }
       &--tiny {
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-end;
+        position: relative;
         background: url('../images/island.jpg');
         background-size: 100% 100%;
       }
@@ -130,21 +136,30 @@
     }
     &--small {
       width: 50%;
+      padding: 3rem 6rem 3rem 5rem;
     }
 
   }
   &-pagination {
-    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    padding: 7rem 0;
   }
 }
 .overlay {
   &-rounded {
     display: flex;
     justify-content: center;
-    background: var(--white);
-    border-radius: 50%;
+    position: absolute;
     width: 15rem;
     height: 15rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: var(--white);
+    border-radius: 50%;
   }
 }
 .image {
@@ -179,12 +194,17 @@
     border-top-right-radius: .75rem;
   }
   &__body {
+    margin-bottom: 1.5rem;
     padding: 3rem 4rem;
     background-color: var(--yellow);
   }
   &__date {
     display: flex;
     justify-content: space-between;
+  }
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
   }
   &__destination {
     &-container {
