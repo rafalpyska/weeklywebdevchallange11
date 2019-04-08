@@ -152,9 +152,14 @@
                     </select>
                     <div class="trip-planner__destination trip-planner__destination--empty trip-planner__destination--list-empty">
                         <div class="trip-planner__destination trip-planner__destination--filled">
-                            <object type="image/svg+xml" data="images/svg/mountains.svg"></object>
-                            <p>Mt. Bromo</p>
-                            <p>03.30 - 09.00</p>
+                            <div class="">
+                                <p>Mt. Bromo</p>
+                                <p>estimaed time: <span class="heading-color">5 hours</span></p>
+                            </div>
+                            <div class="">
+                                <object type="image/svg+xml" data="images/svg/mountains.svg"></object>
+                                <a href="#">view details</a>
+                            </div>
                         </div>
                     </div>
                     <div class="trip-planner__destination trip-planner__destination--empty trip-planner__destination--list-empty">
@@ -192,15 +197,15 @@
                 <div class="contact__form-container">
                     <form class="contact__form" action="">
                         <label class="visuallyhidden" for="contact-email">Your email address</label>
-                        <input class="input contact__input contact__email" id="contact-email" name="contact-email" type="email" placeholder="Your email">
+                        <input class="input contact__input contact__email" id="contact-email" name="contact-email" type="email" placeholder="Your email" required>
                         <div class="contact__fieldset">
                             <label class="visuallyhidden" for="contact-company">Your company</label>
                             <input class="input contact__input contact__company" id="contact-company" name="contact-company" type="text" placeholder="Company">
                             <label class="visuallyhidden" for="contact-subject">Subject of your message</label>
-                            <input class="input contact__input contact__subject" id="contact-subject" name="contact-subject" type="text" placeholder="Subject">
+                            <input class="input contact__input contact__subject" id="contact-subject" name="contact-subject" type="text" placeholder="Subject" required>
                         </div>
                         <label class="visuallyhidden" for="contact-message">Type your message here</label>
-                        <textarea class="input contact__input contact__message" name="contact-message" id="contact-message" cols="30" rows="30" placeholder="Your message"></textarea>
+                        <textarea class="input contact__input contact__message" name="contact-message" id="contact-message" cols="30" rows="30" placeholder="Your message" required></textarea>
                         <label class="visuallyhidden" for="contact-submit">Submit your message</label>
                         <input id="contact-submit" class="btn btn__submit" name="contact-submit" type="submit" value="Send Message">
                     </form>
