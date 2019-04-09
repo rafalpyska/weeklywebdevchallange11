@@ -1,6 +1,9 @@
 .nav {
   max-height: 12.2rem;
   padding: 3.5rem 15rem;
+  @include respond(phone) {
+    padding: 3rem;
+  }
   &__list {
     display: flex;
     list-style-type: none;

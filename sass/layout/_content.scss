@@ -16,15 +16,17 @@
     padding: 10rem;
     @include respond(tab-land-small) {
       width: 100%;
-      padding: 0 5rem;
+      padding: 0 10rem;
       text-align: center;
     }
-    @include respond(phone-small) {
+    @include respond(phone) {
       width: 100%;
-      padding: 0 1rem;
       text-align: center;
     }
-
+  }
+  &__svg {
+    max-width: 100%;
+    height: auto;
   }
   &__info {
     display: flex;
@@ -68,10 +70,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
     }
     &-content {
       width: 55%;
       margin-bottom: 6.5rem;
+      @include respond(phone) {
+        width: 100%
+      }
     }
     &-search {
       display: flex;

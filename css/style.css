@@ -425,6 +425,9 @@ body {
 .nav {
   max-height: 12.2rem;
   padding: 3.5rem 15rem; }
+  @media only screen and (max-width: 50em) {
+    .nav {
+      padding: 3rem; } }
   .nav__list {
     display: flex;
     list-style-type: none; }
@@ -482,13 +485,15 @@ body {
     @media only screen and (max-width: 63em) {
       .city-description__image {
         width: 100%;
-        padding: 0 5rem;
+        padding: 0 10rem;
         text-align: center; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 50em) {
       .city-description__image {
         width: 100%;
-        padding: 0 1rem;
         text-align: center; } }
+  .city-description__svg {
+    max-width: 100%;
+    height: auto; }
   .city-description__info {
     display: flex;
     flex-direction: column;
@@ -527,10 +532,17 @@ body {
     .offer__destination-info {
       display: flex;
       align-items: center;
-      justify-content: space-between; }
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      @media only screen and (max-width: 50em) {
+        .offer__destination-info {
+          margin-bottom: 3rem; } }
     .offer__destination-content {
       width: 55%;
       margin-bottom: 6.5rem; }
+      @media only screen and (max-width: 50em) {
+        .offer__destination-content {
+          width: 100%; } }
     .offer__destination-search {
       display: flex;
       justify-content: space-between;
