@@ -3,20 +3,20 @@
     @media only screen and (max-width: 20em) { @content };
   }
     @if $breakpoint == phone {
-    @media only screen and (max-width: 43.750em) { @content };
+    @media only screen and (max-width: 50em) { @content };
   }
 
     @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) { @content };
   }
     @if $breakpoint == tab-land-small {
-    @media only screen and (max-width: 64em) { @content };
+    @media only screen and (max-width: 63em) { @content };
   }
       @if $breakpoint == tab-land-big {
     @media only screen and (max-width: 75em) { @content };
   }
 
     @if $breakpoint == desktop {
-    @media only screen and (max-width: 100em) { @content };
+    @media only screen and (max-width: 90em) { @content };
   }
 }
