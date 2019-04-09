@@ -19,6 +19,12 @@
       padding: 0 5rem;
       text-align: center;
     }
+    @include respond(phone-small) {
+      width: 100%;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
   }
   &__info {
     display: flex;
@@ -34,6 +40,9 @@
     @include respond(phone) {
       padding: 0 24rem;
     }
+    @include respond(phone-small) {
+      padding: 0 6rem;
+    }
   }
 }
 .offer {
@@ -47,6 +56,9 @@
     }
     @include respond(phone) {
       padding: 0 12.5rem;
+    }
+    @include respond(phone-small) {
+      padding: 0 6.5rem;
     }
 
     &__container {
@@ -109,6 +121,9 @@
       }
       @include respond(phone) {
         grid-auto-rows: 28rem;
+      }
+      @include respond(phone) {
+       grid-template-rows: auto auto;
       }
       &__link {
         display: flex;
@@ -233,12 +248,16 @@
   margin-right: 3.5rem;
   @include respond(phone) {
     width: 100%;
+    margin-right: 0;
   }
   &__container {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10rem;
     padding: 0 13.5rem;
+    @include respond(phone-small) {
+      padding: 0 7.5rem;
+    }
   }
   &__header {
     width: 100%;
@@ -247,6 +266,9 @@
     @include respond(phone) {
       margin-bottom: 6.5rem;
       padding: 0 14rem;
+    }
+    @include respond(phone-small) {
+      padding: 0 10rem;
     }
   }
   &__title {
@@ -344,8 +366,10 @@
   background: url("../images/map.jpg");
   background-position: 100% 100%;
   @include respond(phone) {
+    flex-direction: column;
     padding: 5rem;
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -359,14 +383,25 @@
     display: flex;
     flex-direction: column;
     width: 75%;
+    @include respond(phone) {
+      width: 100%
+    }
     &-container {
       width: 50%;
       z-index: 2;
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
   &__info {
     width: 50%;
     z-index: 2;
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 5rem;
+      text-align: center;
+    }
   }
   &__list {
     font-size: 1.2rem;
@@ -404,6 +439,9 @@
     padding: 5.5rem 10.6rem;
     background-color: var(--green-dark);
     transform: skewX(20deg);
+    @include respond(phone) {
+      padding: 0;
+    }
 
     & > * {
       transform: skewX(-20deg);
