@@ -184,6 +184,9 @@
     }
     &--big {
       width: 40.5%;
+      @include respond(phone) {
+        width: 60%;
+      }
     }
     &--small {
       width: 50%;
@@ -228,6 +231,9 @@
 .trip-planner {
   width: calc(50% - 1.75rem);
   margin-right: 3.5rem;
+  @include respond(phone) {
+    width: 100%;
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -238,6 +244,10 @@
     width: 100%;
     margin-bottom: 14.5rem;
     text-align: center;
+    @include respond(phone) {
+      margin-bottom: 6.5rem;
+      padding: 0 14rem;
+    }
   }
   &__title {
     padding: 3rem 0;
@@ -289,6 +299,9 @@
     }
     &-list {
       width: calc(50% - 1.75rem);
+      @include respond(phone) {
+        width: 100%;
+      }
     }
     &--empty {
       display: flex;
@@ -330,6 +343,9 @@
   padding: 6rem 13.5rem;
   background: url("../images/map.jpg");
   background-position: 100% 100%;
+  @include respond(phone) {
+    padding: 5rem;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -375,6 +391,9 @@
     width: 50%;
     padding: 5.5rem 13.5rem;
     background-color: var(--green-light);
+    @include respond(phone) {
+      padding: 5rem;
+    }
   }
   &__subscribe {
     display: flex;

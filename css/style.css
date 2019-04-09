@@ -615,6 +615,9 @@ body {
         padding: 4rem 4rem 0 3rem; } }
     .offer-overlay--big {
       width: 40.5%; }
+      @media only screen and (max-width: 50em) {
+        .offer-overlay--big {
+          width: 60%; } }
     .offer-overlay--small {
       width: 50%;
       padding: 3rem 6rem 3rem 5rem; }
@@ -651,6 +654,9 @@ body {
 .trip-planner {
   width: calc(50% - 1.75rem);
   margin-right: 3.5rem; }
+  @media only screen and (max-width: 50em) {
+    .trip-planner {
+      width: 100%; } }
   .trip-planner__container {
     display: flex;
     flex-wrap: wrap;
@@ -660,6 +666,10 @@ body {
     width: 100%;
     margin-bottom: 14.5rem;
     text-align: center; }
+    @media only screen and (max-width: 50em) {
+      .trip-planner__header {
+        margin-bottom: 6.5rem;
+        padding: 0 14rem; } }
   .trip-planner__title {
     padding: 3rem 0;
     background-color: var(--teal-dark);
@@ -697,6 +707,9 @@ body {
     align-items: center; }
   .trip-planner__destination-list {
     width: calc(50% - 1.75rem); }
+    @media only screen and (max-width: 50em) {
+      .trip-planner__destination-list {
+        width: 100%; } }
   .trip-planner__destination--empty {
     display: flex;
     justify-content: center;
@@ -733,6 +746,9 @@ body {
   padding: 6rem 13.5rem;
   background: url("../images/map.jpg");
   background-position: 100% 100%; }
+  @media only screen and (max-width: 50em) {
+    .contact {
+      padding: 5rem; } }
   .contact:after {
     content: "";
     position: absolute;
@@ -770,6 +786,9 @@ body {
     width: 50%;
     padding: 5.5rem 13.5rem;
     background-color: var(--green-light); }
+    @media only screen and (max-width: 50em) {
+      .newsletter__info {
+        padding: 5rem; } }
   .newsletter__subscribe {
     display: flex;
     justify-content: flex-end;
