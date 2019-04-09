@@ -35,6 +35,25 @@
     border: 0;
     color: var(--teal-dark);
   }
+  &__add-subdestination {
+    &-text {
+      width: 100%;
+      padding: 2rem;
+      background-color: var(--yellow-dark);
+      border: 0;
+    }
+    &-input {
+      display: block;
+      float: right;
+      padding: 1rem;
+      background-color: var(--yellow-dark);
+      border: 0;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      color: var(--sandy);
+      cursor: pointer;
+    }
+  }
 }
 .contact {
   &__input {
