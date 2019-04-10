@@ -252,6 +252,9 @@ body {
     font-weight: 100;
     color: var(--white);
     margin-bottom: 6rem; }
+    @media only screen and (max-width: 50em) {
+      .heading-contact-details {
+        margin-bottom: 3rem; } }
 
 .heading-newsletter {
   color: var(--white);
@@ -950,7 +953,7 @@ body {
       .newsletter__info {
         align-items: center;
         width: 100%;
-        padding: 5rem; } }
+        padding: 3rem; } }
   .newsletter__subscribe {
     display: flex;
     justify-content: flex-end;
@@ -962,8 +965,10 @@ body {
     transform: skewX(20deg); }
     @media only screen and (max-width: 50em) {
       .newsletter__subscribe {
+        justify-content: center;
         width: 100%;
-        padding: 5rem; } }
+        margin-left: 0;
+        padding: 3rem; } }
     .newsletter__subscribe > * {
       transform: skewX(-20deg); }
 

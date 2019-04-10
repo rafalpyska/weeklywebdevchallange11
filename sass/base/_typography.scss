@@ -49,6 +49,9 @@ body {
       font-weight: 100;
       color: var(--white);
       margin-bottom: 6rem;
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
     }
   }
   &-newsletter {

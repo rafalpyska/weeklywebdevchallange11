@@ -1,14 +1,15 @@
 (function () {
+    const nav = document.querySelector(".nav");
     const nav_toggle = document.querySelector(".nav__toggle");
-    const nav = document.querySelector(".nav__list");
+    const nav__list = document.querySelector(".nav__list");
 
     nav_toggle.addEventListener("click", function () {
-        nav.classList.toggle("nav__list--expanded");
-        // if(nav.classList.contains("navigation__expanded--visible")) {
-        //     nav__list.setAttribute('aria-expanded', true);
-        // } else {
-        //     nav__list.setAttribute("aria-expanded", false);
-        // }
+        nav__list.classList.toggle("nav__list--expanded");
+        if(nav__list.classList.contains("nav__list--expanded")) {
+            nav.setAttribute('aria-expanded', true);
+        } else {
+            nav.setAttribute("aria-expanded", false);
+        }
     }, false);
     
     const datePicker = document.querySelector('.trip-planner__datepicker');
