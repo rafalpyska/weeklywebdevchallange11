@@ -142,6 +142,9 @@
       @include respond(phone) {
        grid-template-rows: auto auto;
       }
+      @include respond(phone-small) {
+        padding: 0 4.5rem;
+      }
       &__link {
         display: flex;
         width: 59.5%;
@@ -158,6 +161,9 @@
         transition: .3s all;
         &:hover {
           opacity: 1;
+        }
+        @include respond(phone) {
+          width: 100%;
         }
       }
     }
@@ -177,6 +183,9 @@
         grid-column: 8 / 13;
         @include respond(phone) {
           grid-column: 4 / 10;
+        }
+        @include respond(phone-small) {
+          grid-column: 1 / -1;
         }
       }
       &--big {
@@ -221,6 +230,7 @@
       width: 40.5%;
       @include respond(phone) {
         width: 100%;
+        padding: 4rem 4rem 4rem 3rem;
       }
     }
     &--small {

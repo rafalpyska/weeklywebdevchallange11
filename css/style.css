@@ -680,6 +680,9 @@ body {
     @media only screen and (max-width: 50em) {
       .offer-city-list {
         grid-template-rows: auto auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .offer-city-list {
+        padding: 0 4.5rem; } }
     .offer-city-list__link {
       display: flex;
       width: 59.5%;
@@ -696,6 +699,9 @@ body {
       transition: .3s all; }
       .offer-city-list__link:hover {
         opacity: 1; }
+      @media only screen and (max-width: 50em) {
+        .offer-city-list__link {
+          width: 100%; } }
   .offer-city-list__item {
     display: flex;
     width: 100%; }
@@ -711,6 +717,9 @@ body {
       @media only screen and (max-width: 50em) {
         .offer-city-list__item:last-child {
           grid-column: 4 / 10; } }
+      @media only screen and (max-width: 37.5em) {
+        .offer-city-list__item:last-child {
+          grid-column: 1 / -1; } }
     .offer-city-list__item--big {
       justify-content: flex-end;
       background: url("../images/image.jpg");
@@ -745,7 +754,8 @@ body {
       width: 40.5%; }
       @media only screen and (max-width: 50em) {
         .offer-overlay--big {
-          width: 100%; } }
+          width: 100%;
+          padding: 4rem 4rem 4rem 3rem; } }
     .offer-overlay--small {
       width: 50%;
       padding: 3rem 6rem 3rem 5rem; }
