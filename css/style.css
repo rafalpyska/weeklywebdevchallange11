@@ -209,9 +209,6 @@ body {
   font-size: 1.4rem;
   color: #b5b5b5;
   font-style: italic; }
-  @media only screen and (max-width: 50em) {
-    *::placeholder {
-      font-size: 1rem; } }
 
 @font-face {
   font-family: "ChunkFive";
@@ -265,6 +262,9 @@ body {
 
 .paragraph {
   line-height: 4rem; }
+  @media only screen and (max-width: 50em) {
+    .paragraph {
+      line-height: 3rem; } }
 
 .section-paragraph {
   font-size: 1.6rem;
@@ -352,6 +352,10 @@ body {
   border: 1px solid var(--border);
   border-radius: 2rem;
   background: url("../images/search.png") no-repeat 1rem; }
+  @media only screen and (max-width: 50em) {
+    .input__search {
+      width: 100%;
+      padding: 1.5rem 5rem; } }
 
 .input {
   display: flex;
@@ -512,6 +516,9 @@ body {
           color: var(--green-dark); } }
       .nav__item.active:hover {
         border-color: var(--yellow); }
+        @media only screen and (max-width: 50em) {
+          .nav__item.active:hover {
+            border-color: var(--teal-dark); } }
         .nav__item.active:hover .nav__link {
           color: var(--yellow); }
     @media only screen and (max-width: 50em) {
@@ -616,7 +623,7 @@ body {
       flex-wrap: wrap; }
       @media only screen and (max-width: 50em) {
         .offer__destination-info {
-          margin-bottom: 3rem; } }
+          margin-bottom: 2rem; } }
     .offer__destination-content {
       width: 55%;
       margin-bottom: 6.5rem; }
@@ -630,6 +637,9 @@ body {
       align-items: center;
       width: 100%;
       margin-bottom: 2rem; }
+      @media only screen and (max-width: 50em) {
+        .offer__destination-search {
+          justify-content: center; } }
   .offer__item:first-of-type {
     margin-right: 1rem; }
   .offer__item:last-of-type {
@@ -647,6 +657,9 @@ body {
     text-transform: uppercase;
     font-size: 1.6rem;
     color: var(--gray-light); }
+    @media only screen and (max-width: 50em) {
+      .offer__list {
+        margin-top: 2rem; } }
   .offer-city-list {
     display: grid;
     grid-gap: 3rem;
@@ -906,6 +919,9 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: var(--green-dark); }
+  @media only screen and (max-width: 50em) {
+    .newsletter {
+      flex-wrap: wrap; } }
   .newsletter__info {
     display: flex;
     flex-direction: column;
@@ -914,6 +930,8 @@ body {
     background-color: var(--green-light); }
     @media only screen and (max-width: 50em) {
       .newsletter__info {
+        align-items: center;
+        width: 100%;
         padding: 5rem; } }
   .newsletter__subscribe {
     display: flex;
@@ -926,7 +944,8 @@ body {
     transform: skewX(20deg); }
     @media only screen and (max-width: 50em) {
       .newsletter__subscribe {
-        padding: 0; } }
+        width: 100%;
+        padding: 5rem; } }
     .newsletter__subscribe > * {
       transform: skewX(-20deg); }
 

@@ -74,6 +74,9 @@
       }
       &:hover {
         border-color: var(--yellow);
+        @include respond(phone) {
+          border-color: var(--teal-dark);
+        }
         & .nav__link {
           color: var(--yellow);
         }

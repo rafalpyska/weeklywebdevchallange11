@@ -72,14 +72,14 @@
       justify-content: space-between;
       flex-wrap: wrap;
       @include respond(phone) {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
     }
     &-content {
       width: 55%;
       margin-bottom: 6.5rem;
       @include respond(phone) {
-        width: 100%
+        width: 100%;
       }
     }
     &-search {
@@ -89,6 +89,9 @@
       align-items: center;
       width: 100%;
       margin-bottom: 2rem;
+      @include respond(phone) {
+        justify-content: center;
+      }
     }
   }
   &__item {
@@ -118,6 +121,9 @@
     text-transform: uppercase;
     font-size: 1.6rem;
     color: var(--gray-light);
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
   }
   &-city {
     &-list {
@@ -430,6 +436,10 @@
   width: 100%;
   overflow: hidden;
   background-color: var(--green-dark);
+  @include respond(phone) {
+    flex-wrap: wrap;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -437,6 +447,8 @@
     padding: 5.5rem 13.5rem;
     background-color: var(--green-light);
     @include respond(phone) {
+      align-items: center;
+      width: 100%;
       padding: 5rem;
     }
   }
@@ -450,7 +462,8 @@
     background-color: var(--green-dark);
     transform: skewX(20deg);
     @include respond(phone) {
-      padding: 0;
+      width: 100%;
+      padding: 5rem;
     }
 
     & > * {

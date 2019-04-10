@@ -5,9 +5,6 @@ body {
   font-size: 1.4rem;
   color: rgba(181, 181, 181, 1);
   font-style: italic;
-  @include respond(phone) {
-    font-size: 1rem
-  }
 }
 @font-face {
   font-family: "ChunkFive";
@@ -64,6 +61,9 @@ body {
 }
 .paragraph {
   line-height: 4rem;
+  @include respond(phone) {
+    line-height: 3rem;
+  }
 }
 .section {
   &-paragraph {
