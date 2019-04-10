@@ -118,6 +118,9 @@
   font-weight: 800;
 }
 .user {
+  @include respond(phone) {
+    order: -1;
+  }
   &__image {
     width: 5rem;
     height: 5rem;

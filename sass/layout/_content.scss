@@ -80,6 +80,7 @@
       margin-bottom: 6.5rem;
       @include respond(phone) {
         width: 100%;
+        margin-bottom: 3.5rem;
       }
     }
     &-search {
@@ -182,6 +183,9 @@
         justify-content: flex-end;
         background: url('../images/image.jpg');
         background-size: 100% 100%;
+        @include respond(phone) {
+          flex-wrap: wrap;
+        }
       }
       &--small {
         justify-content: space-between;
@@ -216,7 +220,7 @@
     &--big {
       width: 40.5%;
       @include respond(phone) {
-        width: 60%;
+        width: 100%;
       }
     }
     &--small {

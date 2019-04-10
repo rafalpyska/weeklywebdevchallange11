@@ -548,6 +548,10 @@ body {
 .logo-bold {
   font-weight: 800; }
 
+@media only screen and (max-width: 50em) {
+  .user {
+    order: -1; } }
+
 .user__image {
   width: 5rem;
   height: 5rem;
@@ -629,7 +633,8 @@ body {
       margin-bottom: 6.5rem; }
       @media only screen and (max-width: 50em) {
         .offer__destination-content {
-          width: 100%; } }
+          width: 100%;
+          margin-bottom: 3.5rem; } }
     .offer__destination-search {
       display: flex;
       justify-content: space-between;
@@ -710,6 +715,9 @@ body {
       justify-content: flex-end;
       background: url("../images/image.jpg");
       background-size: 100% 100%; }
+      @media only screen and (max-width: 50em) {
+        .offer-city-list__item--big {
+          flex-wrap: wrap; } }
     .offer-city-list__item--small {
       justify-content: space-between;
       background: url("../images/image2.jpg");
@@ -737,7 +745,7 @@ body {
       width: 40.5%; }
       @media only screen and (max-width: 50em) {
         .offer-overlay--big {
-          width: 60%; } }
+          width: 100%; } }
     .offer-overlay--small {
       width: 50%;
       padding: 3rem 6rem 3rem 5rem; }
