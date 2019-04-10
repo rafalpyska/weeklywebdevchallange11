@@ -44,6 +44,9 @@ body {
     color: var(--white);
     z-index: 2;
     margin-bottom: 10rem;
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
     &-details {
       font-size: 4.4rem;
       font-weight: 100;

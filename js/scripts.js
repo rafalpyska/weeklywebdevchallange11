@@ -79,6 +79,12 @@
         }
     });
 
+    const printBtn = document.querySelector('.btn__print');
+
+    printBtn.addEventListener('click', function() {
+        window.print();
+    }, false);
+
     // class DestinationList {
     //     static displayDestination() {
     //         const StoredDestination = [
@@ -113,13 +119,13 @@
     //         divInner.setAttribute('draggable', 'true');
     //
     //         divInner.innerHTML = `
-    //                         <div class="">
-    //                             <p>${destination.place}</p>
-    //                             <p>estimated time: <span class="heading-color">${destination.time}</span></p>
+    //                         <div class="trip-planner__destination-info">
+    //                             <p class="trip-planner__destination-info-paragraph">${destination.place}</p>
+    //                             <p class="trip-planner__destination-info-paragraph">estimated time: <span class="heading-color">${destination.time}</span></p>
     //                         </div>
-    //                         <div class="">
+    //                         <div class="trip-planner__destination-details">
     //                             <object type="image/svg+xml" data="${destination.image}"></object>
-    //                             <a href="#">view details</a>
+    //                             <a href="#" class="trip-planner__destination-details-link">view details</a>
     //                         </div>
     //                     </div>
     //         `;
@@ -128,10 +134,10 @@
     // }
     //
     // document.addEventListener('DOMContentLoaded', DestinationList.displayDestination);
-    //
+
     //
     // let item = null;
-
+    //
     // document.addEventListener('dragstart', function(e) {
     //     item = e.target;
     //     item.style.opacity = '0.4';
@@ -149,7 +155,7 @@
     //     e.target.appendChild(item);
     //     const newEmptyDiv = document.createElement('div');
     //     newEmptyDiv.classList.add('trip-planner__destination', 'trip-planner__destination--empty','trip-planner__destination--list-empty');
-    //     if(e.target.nextSibling.length = 0) {
+    //     if(e.target.nextSibling.length === 0) {
     //         console.log('JAPS?');
     //         destinationContainer.removeChild(newEmptyDiv);
     //     } else {

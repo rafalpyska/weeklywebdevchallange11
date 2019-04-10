@@ -247,6 +247,9 @@ body {
   color: var(--white);
   z-index: 2;
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 50em) {
+    .heading-contact {
+      margin-bottom: 3rem; } }
   .heading-contact-details {
     font-size: 4.4rem;
     font-weight: 100;
@@ -493,14 +496,14 @@ body {
         opacity: 0;
         width: 100%;
         max-height: 0;
-        transition: .3s all; } }
+        transition: .4s all; } }
     @media only screen and (max-width: 50em) {
       .nav__list--expanded {
         opacity: 1;
         max-height: 25rem;
         width: 100%;
         margin-top: 2rem;
-        transition: .3s all; } }
+        transition: .4s all; } }
   .nav__item {
     display: flex;
     align-items: center;
@@ -727,13 +730,13 @@ body {
       justify-content: flex-end;
       background: url("../images/image.jpg");
       background-size: 100% 100%; }
-      @media only screen and (max-width: 50em) {
-        .offer-city-list__item--big {
-          flex-wrap: wrap; } }
     .offer-city-list__item--small {
       justify-content: space-between;
       background: url("../images/image2.jpg");
       background-size: 100% 100%; }
+      @media only screen and (max-width: 50em) {
+        .offer-city-list__item--small {
+          background-size: cover; } }
     .offer-city-list__item--tiny {
       justify-content: flex-end;
       position: relative;
@@ -817,6 +820,7 @@ body {
         padding: 0 14rem; } }
     @media only screen and (max-width: 37.5em) {
       .trip-planner__header {
+        margin-bottom: 3.5rem;
         padding: 0 10rem; } }
   .trip-planner__title {
     padding: 3rem 0;
@@ -886,6 +890,11 @@ body {
     border: 1px solid var(--gray-light);
     border-radius: .75rem;
     cursor: pointer; }
+  .trip-planner__destination-info {
+    margin-right: auto; }
+  .trip-planner__destination-details {
+    display: flex;
+    flex-direction: column; }
 
 .contact {
   display: flex;

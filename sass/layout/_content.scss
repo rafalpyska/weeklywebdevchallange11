@@ -192,14 +192,14 @@
         justify-content: flex-end;
         background: url('../images/image.jpg');
         background-size: 100% 100%;
-        @include respond(phone) {
-          flex-wrap: wrap;
-        }
       }
       &--small {
         justify-content: space-between;
         background: url('../images/image2.jpg');
         background-size: 100% 100%;
+        @include respond(phone) {
+          background-size: cover;
+        }
       }
       &--tiny {
         justify-content: flex-end;
@@ -298,6 +298,7 @@
       padding: 0 14rem;
     }
     @include respond(phone-small) {
+      margin-bottom: 3.5rem;
       padding: 0 10rem;
     }
   }
@@ -385,6 +386,17 @@
       border: 1px solid var(--gray-light);
       border-radius: .75rem;
       cursor: pointer;
+    }
+    &-info {
+      margin-right: auto;
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      &-link:link,
+      &-link:visited {
+
+      }
     }
   }
 }
