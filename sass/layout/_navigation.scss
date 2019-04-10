@@ -1,12 +1,55 @@
 .nav {
-  max-height: 12.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 3.5rem 15rem;
   @include respond(phone) {
+    justify-content: space-between;
+    align-items: center;
     padding: 3rem;
+    background-color: var(--transparent);
+  }
+  &__toggle {
+    display: none;
+    @include respond(phone) {
+      display: flex;
+      font-size: 6.08rem;
+      position: relative;
+      width: 3rem;
+      height: 1.5rem;
+      border: 0;
+      border-top: 1px solid var(--black);
+      background: transparent;
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid var(--black);
+      }
+      &::after {
+        top: -.75rem;
+      }
+    }
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
+    @include respond(phone) {
+      visibility: hidden;
+      width: 100%;
+      max-height: 0;
+      margin-top: 2rem;
+      transition: .3s all;
+    }
+    &--expanded {
+      visibility: initial;
+      max-height: 25rem;
+      width: 100%;
+    }
   }
   &__item {
     display: flex;
@@ -20,6 +63,11 @@
       border-radius: 4rem;
       font-weight: 800;
       transition: .3s all;
+      @include respond(phone) {
+        border: 0;
+        border-radius: 0;
+        color: var(--green-dark);
+      }
       &:hover {
         border-color: var(--yellow);
         & .nav__link {
@@ -28,19 +76,32 @@
       }
     }
     &:first-child {
-      margin-right: auto;
+      @include respond(phone) {
+        border-top: 1px solid var(--teal-dark);
+      }
+    }
+    @include respond(phone) {
+      width: 100%;
+      padding: 1rem 0;
     }
   }
   &__logo:link,
   &__logo:visited {
+    margin-right: auto;
     font-size: 2.518rem;
     color: var(--white);
+    @include respond(phone) {
+      color: var(--teal-dark);
+    }
   }
   &__link:link,
   &__link:visited {
     font-size: 1.4rem;
     color: var(--white);
     transition: .2s all;
+    @include respond(phone) {
+      color: var(--gray-dark);
+    }
   }
   &__link:hover {
     color: var(--yellow);

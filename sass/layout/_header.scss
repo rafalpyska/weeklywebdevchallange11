@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: center;
     padding: 11rem 0;
+    @include respond(phone) {
+      padding: 4rem 5rem;
+      text-align: center;
+    }
   }
 }
 

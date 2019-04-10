@@ -5,6 +5,9 @@
   cursor: pointer;
   background: transparent;
   font-size: 1.6rem;
+  @include respond(phone) {
+    font-size: 1.25rem;
+  }
   &__header {
     background: var(--yellow);
     border-radius: 4rem;

@@ -188,6 +188,7 @@ template {
 :root {
   --transparent: rgba(255, 255, 255, .8);
   --white: rgba(255, 255, 255, .9);
+  --black: rgba(0, 0, 0, 1);
   --teal-dark: rgba(1, 162, 166, 1);
   --teal-transparent: rgba(1, 162, 166, .7);
   --teal-light: rgba(41, 217, 194, 1);
@@ -208,6 +209,9 @@ body {
   font-size: 1.4rem;
   color: #b5b5b5;
   font-style: italic; }
+  @media only screen and (max-width: 50em) {
+    *::placeholder {
+      font-size: 1rem; } }
 
 @font-face {
   font-family: "ChunkFive";
@@ -215,7 +219,7 @@ body {
 
 .heading-primary {
   font-family: "ChunkFive";
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--teal-light); }
 
 .heading-secondary {
@@ -229,6 +233,9 @@ body {
   font-size: 8.08rem;
   text-transform: uppercase;
   margin: 0; }
+  @media only screen and (max-width: 50em) {
+    .heading-header {
+      font-size: 6.08rem; } }
 
 .heading-color {
   color: var(--teal-dark); }
@@ -252,6 +259,9 @@ body {
 .heading-newsletter {
   color: var(--white);
   margin: 0; }
+  @media only screen and (max-width: 50em) {
+    .heading-newsletter {
+      font-size: 3rem; } }
 
 .paragraph {
   line-height: 4rem; }
@@ -259,9 +269,15 @@ body {
 .section-paragraph {
   font-size: 1.6rem;
   color: var(--gray-dark); }
+  @media only screen and (max-width: 50em) {
+    .section-paragraph {
+      font-size: 1.25rem; } }
 
 .offer-paragraph {
   font-size: 1.6rem; }
+  @media only screen and (max-width: 50em) {
+    .offer-paragraph {
+      font-size: 1.25rem; } }
 
 .visuallyhidden {
   border: 0;
@@ -281,6 +297,9 @@ body {
   cursor: pointer;
   background: transparent;
   font-size: 1.6rem; }
+  @media only screen and (max-width: 50em) {
+    .btn {
+      font-size: 1.25rem; } }
   .btn__header {
     background: var(--yellow);
     border-radius: 4rem;
@@ -415,6 +434,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 11rem 0; }
+    @media only screen and (max-width: 50em) {
+      .header__info {
+        padding: 4rem 5rem;
+        text-align: center; } }
 
 .overlay {
   width: 70%;
@@ -423,14 +446,52 @@ body {
   background-color: var(--transparent); }
 
 .nav {
-  max-height: 12.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 3.5rem 15rem; }
   @media only screen and (max-width: 50em) {
     .nav {
-      padding: 3rem; } }
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem;
+      background-color: var(--transparent); } }
+  .nav__toggle {
+    display: none; }
+    @media only screen and (max-width: 50em) {
+      .nav__toggle {
+        display: flex;
+        font-size: 6.08rem;
+        position: relative;
+        width: 3rem;
+        height: 1.5rem;
+        border: 0;
+        border-top: 1px solid var(--black);
+        background: transparent;
+        cursor: pointer; }
+        .nav__toggle::before, .nav__toggle::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 100%;
+          border-top: 1px solid var(--black); }
+        .nav__toggle::after {
+          top: -.75rem; } }
   .nav__list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none; }
+    @media only screen and (max-width: 50em) {
+      .nav__list {
+        visibility: hidden;
+        width: 100%;
+        max-height: 0;
+        margin-top: 2rem;
+        transition: .3s all; } }
+    .nav__list--expanded {
+      visibility: initial;
+      max-height: 25rem;
+      width: 100%; }
   .nav__item {
     display: flex;
     align-items: center;
@@ -442,19 +503,36 @@ body {
       border-radius: 4rem;
       font-weight: 800;
       transition: .3s all; }
+      @media only screen and (max-width: 50em) {
+        .nav__item.active {
+          border: 0;
+          border-radius: 0;
+          color: var(--green-dark); } }
       .nav__item.active:hover {
         border-color: var(--yellow); }
         .nav__item.active:hover .nav__link {
           color: var(--yellow); }
-    .nav__item:first-child {
-      margin-right: auto; }
+    @media only screen and (max-width: 50em) {
+      .nav__item:first-child {
+        border-top: 1px solid var(--teal-dark); } }
+    @media only screen and (max-width: 50em) {
+      .nav__item {
+        width: 100%;
+        padding: 1rem 0; } }
   .nav__logo:link, .nav__logo:visited {
+    margin-right: auto;
     font-size: 2.518rem;
     color: var(--white); }
+    @media only screen and (max-width: 50em) {
+      .nav__logo:link, .nav__logo:visited {
+        color: var(--teal-dark); } }
   .nav__link:link, .nav__link:visited {
     font-size: 1.4rem;
     color: var(--white);
     transition: .2s all; }
+    @media only screen and (max-width: 50em) {
+      .nav__link:link, .nav__link:visited {
+        color: var(--gray-dark); } }
   .nav__link:hover {
     color: var(--yellow); }
 
@@ -546,6 +624,7 @@ body {
     .offer__destination-search {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
       width: 100%;
       margin-bottom: 2rem; }

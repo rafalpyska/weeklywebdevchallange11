@@ -1,4 +1,16 @@
 (function () {
+    const nav_toggle = document.querySelector(".nav__toggle");
+    const nav = document.querySelector(".nav__list");
+
+    nav_toggle.addEventListener("click", function () {
+        nav.classList.toggle("nav__list--expanded");
+        // if(nav.classList.contains("navigation__expanded--visible")) {
+        //     nav__list.setAttribute('aria-expanded', true);
+        // } else {
+        //     nav__list.setAttribute("aria-expanded", false);
+        // }
+    }, false);
+    
     const datePicker = document.querySelector('.trip-planner__datepicker');
     datePicker.valueAsDate = new Date();
 
