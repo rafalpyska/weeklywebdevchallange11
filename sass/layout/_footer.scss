@@ -4,6 +4,10 @@
   height: 27rem;
   padding: 2.5rem 13.5rem;
   background: url('../images/footer.jpg');
+  @include respond(phone) {
+    height: 15rem;
+    padding: 2.5rem 5.5rem;
+  }
   &__list {
     display: flex;
     width: 50%;
@@ -16,6 +20,9 @@
     margin: 0 1rem;
     font-size: 1.2rem;
     color: var(--gray-dark);
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
   &__link:link,
   &__link:visited {

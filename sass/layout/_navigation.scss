@@ -39,16 +39,20 @@
     flex-wrap: wrap;
     list-style-type: none;
     @include respond(phone) {
-      visibility: hidden;
+      opacity: 0;
       width: 100%;
       max-height: 0;
-      margin-top: 2rem;
       transition: .3s all;
     }
+
     &--expanded {
-      visibility: initial;
-      max-height: 25rem;
-      width: 100%;
+      @include respond(phone) {
+        opacity: 1;
+        max-height: 25rem;
+        width: 100%;
+        margin-top: 2rem;
+        transition: .3s all;
+      }
     }
   }
   &__item {
