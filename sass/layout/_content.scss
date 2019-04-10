@@ -123,7 +123,7 @@
     font-size: 1.6rem;
     color: var(--gray-light);
     @include respond(phone) {
-      margin-top: 2rem;
+      margin: 2rem 0;
     }
   }
   &-city {
@@ -304,7 +304,7 @@
   }
   &__title {
     padding: 3rem 0;
-    background-color: var(--teal-dark);
+    background-color: var(--teal-light);
     text-align: center;
     color: var(--white);
     border-top-left-radius: .75rem;
@@ -352,21 +352,32 @@
     }
     &-list {
       width: calc(50% - 1.75rem);
+      text-align: center;
       @include respond(phone) {
         width: 100%;
       }
+      &-controls {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin-top: 3.5rem;
+        padding: 0;
+        border: none;
+      }
     }
+
     &--empty {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 7rem;
+      min-height: 7rem;
       margin-top: 1.5rem;
       background-color: var(--yellow-dark);
       border: 2px dashed var(--gray-light);
       border-radius: .75rem;
-      font-style: 1.6rem;
+      font-size: 1.6rem;
       color: var(--gray-dark);
       text-align: center;
     }
@@ -380,7 +391,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 7rem;
       padding: 1rem;
       background-color: var(--white);
       border: 1px solid var(--gray-light);
@@ -395,7 +405,8 @@
       flex-direction: column;
       &-link:link,
       &-link:visited {
-
+        font-size: 1.4rem;
+        color: var(--teal-dark);
       }
     }
   }

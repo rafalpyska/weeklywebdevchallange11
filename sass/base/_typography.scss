@@ -88,3 +88,25 @@ body {
     }
   }
 }
+
+.trip-planner {
+  &__destination-info {
+    &-heading {
+      font-size: 2.4rem;
+      font-weight: 100;
+      color: var(--gray-dark);
+      margin-bottom: 2rem;
+    }
+    &-paragraph {
+      font-size: 1.4rem;
+      color: var(--gray-light);
+    }
+  }
+  &__destination-list {
+    &-heading {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--teal-light);
+    }
+  }
+}

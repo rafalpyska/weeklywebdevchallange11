@@ -55,7 +55,6 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
 }
 
 b,
@@ -201,7 +200,7 @@ template {
 
 :root {
  --transparent: rgba(255, 255, 255, .8);
-  --white: rgba(255, 255, 255, .9);
+  --white: rgba(255, 255, 255, 1);
   --black: rgba(0, 0, 0, 1);
   --teal-dark: rgba(1, 162, 166, 1);
   --teal-transparent: rgba(1, 162, 166, .7);
