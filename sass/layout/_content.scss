@@ -1,9 +1,13 @@
 .city-description {
   display: flex;
   padding: 0 13.5rem;
+  @include respond(desktop-ultrahd) {
+    padding: 0 71.5rem;
+  }
   @include respond(desktop) {
     padding: 5.5rem;
   }
+
   @include respond(tab-land-big) {
     padding: 0;
   }
@@ -53,6 +57,9 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 23.5rem;
+    @include respond(desktop-ultrahd) {
+      padding: 0 84.5rem;
+    }
     @include respond(desktop) {
       padding: 0 18.5rem;
     }
@@ -133,6 +140,9 @@
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 51.5rem auto;
       padding: 0 13.5rem;
+      @include respond(desktop-ultrahd) {
+        padding: 0 71.5rem;
+      }
       @include respond(desktop) {
         padding: 0 7.5rem;
       }
@@ -285,6 +295,9 @@
     flex-wrap: wrap;
     margin-bottom: 10rem;
     padding: 0 13.5rem;
+    @include respond(desktop-ultrahd) {
+      padding: 0 71.5rem;
+    }
     @include respond(phone-small) {
       padding: 0 7.5rem;
     }
@@ -417,6 +430,9 @@
   padding: 6rem 13.5rem;
   background: url("../images/map.jpg");
   background-position: 100% 100%;
+  @include respond(desktop-ultrahd) {
+    padding: 0 71.5rem;
+  }
   @include respond(phone) {
     flex-direction: column;
     padding: 5rem;
@@ -482,6 +498,9 @@
     width: 50%;
     padding: 5.5rem 13.5rem;
     background-color: var(--green-light);
+    @include respond(desktop-ultrahd) {
+      padding: 5.5rem 0 5.5rem 71.5rem;
+    }
     @include respond(phone) {
       align-items: center;
       width: 100%;
@@ -497,6 +516,9 @@
     padding: 5.5rem 10.6rem;
     background-color: var(--green-dark);
     transform: skewX(20deg);
+    @include respond(desktop-ultrahd) {
+      padding: 5.5rem 71.5rem 5.5rem 0;
+    }
     @include respond(phone) {
       justify-content: center;
       width: 100%;

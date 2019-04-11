@@ -582,6 +582,12 @@ body {
 .city-description {
   display: flex;
   padding: 0 13.5rem; }
+  @media only screen and (min-width: 175em) {
+    .city-description {
+      padding: 0 71.5rem; } }
+  @media only screen and (max-width: 90em) {
+    .city-description {
+      padding: 5.5rem; } }
   @media only screen and (max-width: 90em) {
     .city-description {
       padding: 5.5rem; } }
@@ -631,6 +637,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 0 23.5rem; }
+    @media only screen and (min-width: 175em) {
+      .offer__destination {
+        padding: 0 84.5rem; } }
+    @media only screen and (max-width: 90em) {
+      .offer__destination {
+        padding: 0 18.5rem; } }
     @media only screen and (max-width: 90em) {
       .offer__destination {
         padding: 0 18.5rem; } }
@@ -693,6 +705,12 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 51.5rem auto;
     padding: 0 13.5rem; }
+    @media only screen and (min-width: 175em) {
+      .offer-city-list {
+        padding: 0 71.5rem; } }
+    @media only screen and (max-width: 90em) {
+      .offer-city-list {
+        padding: 0 7.5rem; } }
     @media only screen and (max-width: 90em) {
       .offer-city-list {
         padding: 0 7.5rem; } }
@@ -772,6 +790,9 @@ body {
     @media only screen and (max-width: 90em) {
       .offer-overlay {
         padding: 4rem 4rem 0 3rem; } }
+    @media only screen and (max-width: 90em) {
+      .offer-overlay {
+        padding: 4rem 4rem 0 3rem; } }
     .offer-overlay--big {
       width: 40.5%; }
       @media only screen and (max-width: 50em) {
@@ -781,6 +802,9 @@ body {
     .offer-overlay--small {
       width: 50%;
       padding: 3rem 6rem 3rem 5rem; }
+      @media only screen and (max-width: 90em) {
+        .offer-overlay--small {
+          padding: 2rem 3rem 2rem 3rem; } }
       @media only screen and (max-width: 90em) {
         .offer-overlay--small {
           padding: 2rem 3rem 2rem 3rem; } }
@@ -823,6 +847,9 @@ body {
     flex-wrap: wrap;
     margin-bottom: 10rem;
     padding: 0 13.5rem; }
+    @media only screen and (min-width: 175em) {
+      .trip-planner__container {
+        padding: 0 71.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .trip-planner__container {
         padding: 0 7.5rem; } }
@@ -928,6 +955,9 @@ body {
   padding: 6rem 13.5rem;
   background: url("../images/map.jpg");
   background-position: 100% 100%; }
+  @media only screen and (min-width: 175em) {
+    .contact {
+      padding: 0 71.5rem; } }
   @media only screen and (max-width: 50em) {
     .contact {
       flex-direction: column;
@@ -983,6 +1013,9 @@ body {
     width: 50%;
     padding: 5.5rem 13.5rem;
     background-color: var(--green-light); }
+    @media only screen and (min-width: 175em) {
+      .newsletter__info {
+        padding: 5.5rem 0 5.5rem 71.5rem; } }
     @media only screen and (max-width: 50em) {
       .newsletter__info {
         align-items: center;
@@ -997,6 +1030,9 @@ body {
     padding: 5.5rem 10.6rem;
     background-color: var(--green-dark);
     transform: skewX(20deg); }
+    @media only screen and (min-width: 175em) {
+      .newsletter__subscribe {
+        padding: 5.5rem 71.5rem 5.5rem 0; } }
     @media only screen and (max-width: 50em) {
       .newsletter__subscribe {
         justify-content: center;
