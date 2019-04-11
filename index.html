@@ -123,7 +123,7 @@
                 </header>
                 <div class="trip-planner">
                     <div class="trip-planner__title">
-                        <h3 class="heading-tertiary">Your Ittinery Title Here</h3>
+                        <h3 class="heading-tertiary trip-planner__heading-title" contenteditable="true">Your Ittinery Title Here</h3>
                     </div>
                     <div class="trip-planner__body">
                         <div class="trip-planner__date">
@@ -136,7 +136,9 @@
                             </div>
                             <form class="trip-planner__form">
                                 <div class="trip-planner__subdestination-list-container">
+                                    <ul class="trip-planner__subdestination-list">
 
+                                    </ul>
                                 </div>
                                 <label for="add-subdestination-text" class="visuallyhidden">Add sub destination</label>
                                 <input type="text" name="add-subdestination-text" id="add-subdestination-text" class="trip-planner__add-subdestination-text" placeholder="add sub destination">
@@ -158,6 +160,7 @@
                             <option value="amusement">Amusement</option>
                         </select>
                     </fieldset>
+
                 </div>
             </section>
             <section class="contact">
@@ -262,6 +265,7 @@
                 <p class="footer__copyrights">copyright&copy;YokMalang. All rights reserved. 2015</p>
             </footer>
         </main>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@next/dist/interact.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

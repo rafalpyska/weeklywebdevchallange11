@@ -48,6 +48,10 @@
       padding: 2.5rem 3rem;
     }
   }
+  &__remove {
+    margin-left: auto;
+    color: red;
+  }
   &__submit {
     background: var(--green-light);
     border-radius: 4rem;
