@@ -454,6 +454,10 @@ body {
 .header {
   background: url("../images/header.jpg") no-repeat center;
   background-size: cover; }
+  @media only screen and (min-width: 175em) {
+    .header {
+      background-size: contain;
+      background-color: var(--teal-transparent); } }
   .header__info {
     display: flex;
     flex-direction: column;
@@ -470,6 +474,9 @@ body {
   height: 4rem;
   margin: 0 auto;
   background-color: var(--transparent); }
+  @media only screen and (min-width: 175em) {
+    .overlay {
+      width: 30%; } }
 
 .nav {
   display: flex;

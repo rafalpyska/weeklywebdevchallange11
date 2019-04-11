@@ -1,6 +1,10 @@
 .header {
   background: url('../images/header.jpg') no-repeat center;
   background-size: cover;
+  @include respond(desktop-ultrahd) {
+    background-size: contain;
+    background-color: var(--teal-transparent);
+  }
   &__info {
     display: flex;
     flex-direction: column;
@@ -19,4 +23,7 @@
   height: 4rem;
   margin: 0 auto;
   background-color: var(--transparent);
+  @include respond(desktop-ultrahd) {
+    width: 30%;
+  }
 }
