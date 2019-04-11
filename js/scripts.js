@@ -41,7 +41,7 @@
             listItem.innerHTML = `
                 ${destination.subdestination}
             `;
-            const btnRemove = document.createElement('button');
+            const btnRemove = document.createElement('a');
             btnRemove.classList.add('btn', 'btn__remove');
             btnRemove.textContent = "X";
             listItem.appendChild(btnRemove);
