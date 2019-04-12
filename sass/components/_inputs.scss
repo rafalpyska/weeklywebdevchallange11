@@ -52,6 +52,11 @@
       border-bottom-right-radius: 1rem;
       color: var(--sandy);
       cursor: pointer;
+      transition: .3s all;
+      &:hover {
+        background-color: var(--teal-light);
+        color: var(--white);
+      }
     }
   }
 }

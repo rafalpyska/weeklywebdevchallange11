@@ -118,9 +118,19 @@
       align-items: center;
       font-size: 1.6rem;
       color: var(--gray-light);
+      transition: .3s all;
+      &:hover {
+        color: var(--teal-dark);
+      }
+    }
+    &__link:hover .offer-info__icon-path {
+      fill: var(--teal-dark);
     }
     &__icon {
       margin-right: 1rem;
+      &-path {
+        transition: .3s all;
+      }
     }
   }
   &__list {

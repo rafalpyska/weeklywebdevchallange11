@@ -330,7 +330,10 @@ body {
   .btn__pagination {
     padding: 0 1.5rem;
     font-size: 1.8rem;
-    color: var(--gray-light); }
+    color: var(--gray-light);
+    transition: .3s all; }
+    .btn__pagination:hover:not(:first-child) {
+      color: var(--teal-light); }
     .btn__pagination--active {
       font-size: 2.4rem;
       color: var(--teal-dark); }
@@ -426,7 +429,11 @@ body {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     color: var(--sandy);
-    cursor: pointer; }
+    cursor: pointer;
+    transition: .3s all; }
+    .trip-planner__add-subdestination-input:hover {
+      background-color: var(--teal-light);
+      color: var(--white); }
 
 .contact__input {
   height: 5.6rem;
@@ -694,9 +701,16 @@ body {
     display: flex;
     align-items: center;
     font-size: 1.6rem;
-    color: var(--gray-light); }
+    color: var(--gray-light);
+    transition: .3s all; }
+    .offer-info__link:link:hover, .offer-info__link:visited:hover {
+      color: var(--teal-dark); }
+  .offer-info__link:hover .offer-info__icon-path {
+    fill: var(--teal-dark); }
   .offer-info__icon {
     margin-right: 1rem; }
+    .offer-info__icon-path {
+      transition: .3s all; }
   .offer__list {
     display: flex;
     list-style-type: none;

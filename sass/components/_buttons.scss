@@ -22,6 +22,10 @@
     padding: 0 1.5rem;
     font-size: 1.8rem;
     color: var(--gray-light);
+    transition: .3s all;
+    &:hover:not(:first-child) {
+      color: var(--teal-light);
+    }
     &--active {
       font-size: 2.4rem;
       color: var(--teal-dark);
