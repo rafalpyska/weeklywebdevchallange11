@@ -18,12 +18,22 @@ nav_toggle.addEventListener("click", function () {
 const datePicker = document.querySelector('.trip-planner__datepicker');
 datePicker.valueAsDate = new Date();
 
-const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
+const tripPlannerTitle = document.querySelector('.trip-planner__title');
 
-tripPlannerTitle.addEventListener('focusout', () => {
-    localStorage.saveLocalStorage();
+tripPlannerTitle.addEventListener('keydown', (e) => {
+    if(e.keyCode == 13) {
+        e.preventDefault();
+    }
+}, false);
+
+tripPlannerTitle.addEventListener('focusout', (e) => {
+    localStorage.setItem('trip-planner-title', e.target.textContent);
     }, false);
-document.addEventListener('DOMContentLoaded', localStorage.loadLocalStorage);
+document.addEventListener('DOMContentLoaded', () => {
+    if(localStorage.getItem('trip-planner-title')) {
+        tripPlannerTitle.textContent = localStorage.getItem('trip-planner-title');
+    }
+},false);
 
 document.addEventListener('DOMContentLoaded', SubdestinationList.displaySubdestination);
 
