@@ -103,6 +103,15 @@
     }
   }
   &__item {
+    color: var(--gray-light);
+    transition: .3s all;
+    cursor: pointer;
+    &:hover {
+      color: var(--teal-dark);
+    }
+    &.active {
+      color: rgba(119, 119, 119, 1);
+    }
     &:first-of-type {
       margin-right: 1rem;
     }
@@ -145,7 +154,7 @@
   }
   &-city {
     &-list {
-      display: grid;
+      display: none;
       grid-gap: 3rem;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 51.5rem auto;
@@ -164,6 +173,9 @@
       }
       @include respond(phone-small) {
         padding: 0 4.5rem;
+      }
+      &--active {
+        display: grid;
       }
       &__link {
         display: flex;
@@ -268,6 +280,10 @@
     padding: 7rem 0;
   }
 }
+#offer__recommended .offer-city-list__item--small {
+  grid-column: 1 / -1;
+}
+
 .overlay {
   &-rounded {
     display: flex;
@@ -377,6 +393,7 @@
       text-align: center;
       @include respond(phone) {
         width: 100%;
+        margin-top: 5rem;
       }
       &-controls {
         display: flex;

@@ -4,9 +4,17 @@
     border: 1px solid var(--border);
     border-radius: 2rem;
     background: url('../images/search.png') no-repeat 1rem;
+    transition: .3s all;
     @include respond(phone) {
       width: 100%;
       padding: 1.5rem 5rem;
+    }
+    &:hover {
+      padding: 1rem 4.5rem;
+      @include respond(phone) {
+        width: 100%;
+        padding: 1.5rem 6rem;
+      }
     }
   }
 }

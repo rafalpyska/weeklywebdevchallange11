@@ -71,13 +71,13 @@
                         <input class="input input__search" type="search" id="places-search" name="search" aria-label="Search destination" placeholder="search destination">
                         <label for="places-search" class="visuallyhidden">Search Destination</label>
                         <ul class="offer__list">
-                            <li class="offer__item"><button class="btn btn__offer active">All Place</button></li>
+                            <li class="offer__item active" data-target="#offer__all">All Place</li>
                             <li class="offer__item">/</li>
-                            <li class="offer__item"><button class="btn btn__offer">Recommended Place</button></li>
+                            <li class="offer__item" data-target="#offer__recommended">Recommended Place</li>
                         </ul>
                     </div>
                 </div>
-                <div class="offer-city-list">
+                <div id="offer__all" class="offer-city-list offer-city-list--active">
                     <div class="offer-city-list__item offer-city-list__item--big">
                         <a class="offer-city-list__link" href="#">see more -></a>
                         <div class="offer-overlay offer-overlay--big">
@@ -107,6 +107,20 @@
                         <a class="offer-city-list__link" href="#">see more -></a>
                     </div>
                 </div>
+                <div id="offer__recommended" class="offer-city-list">
+                    <div class="offer-city-list__item offer-city-list__item--small">
+                        <div class="offer-overlay offer-overlay--small">
+                            <object type="image/svg+xml" data="images/svg/mountains.svg"></object>
+                            <h2 class="heading-secondary">Bromo</h2>
+                            <p class="paragraph offer-paragraph">Mount Bromo is an active volcano and part of the Tengger massif, in East
+                                Java, Indonesia. At 2,329 metres (7,641 ft) it is not the highest peak of the massif, but is the most
+                                well known
+                            </p>
+                        </div>
+                        <a class="offer-city-list__link" href="#">see more -></a>
+                    </div>
+                </div>
+
                 <div class="offer-pagination">
                     <button class="btn btn__pagination btn__pagination--active">1</button>
                     <button class="btn btn__pagination">2</button>
