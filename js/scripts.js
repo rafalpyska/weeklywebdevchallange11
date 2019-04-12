@@ -1,5 +1,7 @@
+import { clearLocalStorage } from "./utilities/utils.js";
 import { CreateSubDestination, SubdestinationList, SavedItems  } from "./components/subdestination-list.js";
 import { DestinationList } from "./components/destination-list.js";
+
 
 const nav = document.querySelector(".nav");
 const nav_toggle = document.querySelector(".nav__toggle");
@@ -18,10 +20,10 @@ nav_toggle.addEventListener("click", function () {
 const datePicker = document.querySelector('.trip-planner__datepicker');
 datePicker.valueAsDate = new Date();
 
-const tripPlannerTitle = document.querySelector('.trip-planner__title');
+const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
 
 tripPlannerTitle.addEventListener('keydown', (e) => {
-    if(e.keyCode == 13) {
+    if(e.keyCode === 13) {
         e.preventDefault();
     }
 }, false);
@@ -36,6 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
 },false);
 
 document.addEventListener('DOMContentLoaded', SubdestinationList.displaySubdestination);
+
+const clearLS = document.querySelector('.trip-planner__add-subdestination-input--clear');
+clearLS.addEventListener('click', clearLocalStorage);
+
+
+
+
 
 
 document.querySelector('.trip-planner__form').addEventListener('submit', (e) => {

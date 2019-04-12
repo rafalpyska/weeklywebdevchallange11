@@ -90,6 +90,11 @@ body {
 }
 
 .trip-planner {
+  &__heading {
+    &-title {
+      cursor: pointer;
+    }
+  }
   &__destination-info {
     &-heading {
       font-size: 2.4rem;

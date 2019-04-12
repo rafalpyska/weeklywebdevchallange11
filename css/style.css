@@ -283,6 +283,9 @@ body {
     .offer-paragraph {
       font-size: 1.25rem; } }
 
+.trip-planner__heading-title {
+  cursor: pointer; }
+
 .trip-planner__destination-info-heading {
   font-size: 2.4rem;
   font-weight: 100;
@@ -422,7 +425,6 @@ body {
     border: 0; }
   .trip-planner__add-subdestination-input {
     display: block;
-    float: right;
     padding: 1rem;
     background-color: var(--yellow-dark);
     border: 0;
@@ -434,6 +436,10 @@ body {
     .trip-planner__add-subdestination-input:hover {
       background-color: var(--teal-light);
       color: var(--white); }
+    .trip-planner__add-subdestination-input--add {
+      float: right; }
+    .trip-planner__add-subdestination-input--clear {
+      float: left; }
 
 .contact__input {
   height: 5.6rem;

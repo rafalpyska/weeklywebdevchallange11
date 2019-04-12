@@ -123,7 +123,7 @@
                 </header>
                 <div class="trip-planner">
                     <div class="trip-planner__title">
-                        <h3 class="heading-tertiary trip-planner__heading-title" contenteditable="true">Your Ittinery Title Here</h3>
+                        <h3 class="heading-tertiary trip-planner__heading-title" contenteditable="true" spellcheck="false">Your Ittinery Title Here</h3>
                     </div>
                     <div class="trip-planner__body">
                         <div class="trip-planner__date">
@@ -140,9 +140,14 @@
 
                                     </ul>
                                 </div>
-                                <label for="add-subdestination-text" class="visuallyhidden">Add sub destination</label>
+                                <label for="add-subdestination-text" class="visuallyhidden">Type in sub destination</label>
                                 <input type="text" name="add-subdestination-text" id="add-subdestination-text" class="trip-planner__add-subdestination-text" placeholder="add sub destination">
-                                <input type="submit" value="add sub destination" class="trip-planner__add-subdestination-input">
+
+                                <label for="add-subdestination-text" class="visuallyhidden">Add/Submit sub destination</label>
+                                <input type="submit" value="add sub destination" class="trip-planner__add-subdestination-input trip-planner__add-subdestination-input--add">
+                                <label for="add-subdestination-text" class="visuallyhidden">Clear all fields</label>
+                                <input type="submit" value="clear all fields" class="trip-planner__add-subdestination-input trip-planner__add-subdestination-input--clear">
+
                             </form>
                         </div>
                     </div>
