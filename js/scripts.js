@@ -3,9 +3,7 @@ import { Navigation } from "./components/expand-navigation.js";
 import { Tabs } from "./components/tabs.js";
 import { CreateSubDestination, TripPlanner, SavedItems   } from "./components/trip-planner.js";
 import { DragDrop } from "./components/drag-drop.js";
-
-const datePicker = document.querySelector('.trip-planner__datepicker');
-datePicker.valueAsDate = new Date();
+import { MutationObserve } from "./utilities/mutation-observer.js";
 
 document.addEventListener('DOMContentLoaded', TripPlanner.displaySubdestination);
 
@@ -41,9 +39,10 @@ printBtn.addEventListener('click', function() {
 Navigation.expandNavigation();
 Tabs.createTabs();
 TripPlanner.changeTitle();
+TripPlanner.setDate();
 DragDrop.init();
+MutationObserve.onChildAdd();
 
 
 
 document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);
-

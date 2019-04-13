@@ -930,8 +930,12 @@ body {
     display: flex;
     justify-content: flex-end; }
   .trip-planner__form {
+    display: block;
+    opacity: 0;
     width: 90%;
-    color: var(--sandy); }
+    max-height: 0;
+    color: var(--sandy);
+    transition: .3s all; }
   .trip-planner__subdestination-list {
     list-style: none;
     padding: 2rem;

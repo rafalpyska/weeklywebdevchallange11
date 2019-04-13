@@ -23,6 +23,20 @@ export class TripPlanner {
             }
         },false);
     }
+    static setDate() {
+        const datePicker = document.querySelector('.trip-planner__datepicker');
+        datePicker.valueAsDate = new Date();
+
+        datePicker.addEventListener('focusout', (e) => {
+            localStorage.setItem('date', datePicker.value);
+        }, false);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if(localStorage.getItem('date')) {
+                datePicker.value = localStorage.getItem('date');
+            }
+        },false);
+    }
     static displaySubdestination() {
         const subdestination = SavedItems.getSubdestination();
         subdestination.forEach((destination) => TripPlanner.addSubdestinationToList(destination));

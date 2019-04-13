@@ -363,8 +363,12 @@
     justify-content: flex-end;
   }
   &__form {
+    display: block;
+    opacity: 0;
     width: 90%;
+    max-height: 0;
     color: var(--sandy);
+    transition: .3s all;
   }
   &__subdestination {
     &-trip-container {
