@@ -1,69 +1,15 @@
 import { clearLocalStorage } from "./utilities/utils.js";
-import { CreateSubDestination, SubdestinationList, SavedItems  } from "./components/subdestination-list.js";
-import { DestinationList } from "./components/destination-list.js";
-
-
-const nav = document.querySelector(".nav");
-const nav_toggle = document.querySelector(".nav__toggle");
-const nav__list = document.querySelector(".nav__list");
-
-nav_toggle.addEventListener("click", function () {
-    nav__list.classList.toggle("nav__list--expanded");
-    if(nav__list.classList.contains("nav__list--expanded")) {
-        nav.setAttribute('aria-expanded', true);
-    } else {
-        nav.setAttribute("aria-expanded", false);
-    }
-}, false);
-
-const tabs = document.querySelector('.offer__list');
-const offers = document.querySelectorAll('.offer-city-list');
-const offerRecommended = document.getElementById('offer__recommended');
-const offerPagination = document.querySelector('.offer-pagination');
-
-tabs.addEventListener('click', (e) => {
-    if(e.target.tagName === 'LI') {
-        const targetOffer = document.querySelector(e.target.dataset.target);
-        offers.forEach((offer) => {
-            if (offer === targetOffer) {
-                offer.classList.add('offer-city-list--active');
-            } else {
-                offer.classList.remove('offer-city-list--active');
-            }
-        })
-    }
-}, false);
-
+import { Tabs } from "./components/tabs.js";
+import { CreateSubDestination, TripPlanner, SavedItems   } from "./components/trip-planner.js";
+import { Navigation } from "./components/expand-navigation.js";
 
 const datePicker = document.querySelector('.trip-planner__datepicker');
 datePicker.valueAsDate = new Date();
 
-const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
-
-tripPlannerTitle.addEventListener('keydown', (e) => {
-    if(e.keyCode === 13) {
-        e.preventDefault();
-    }
-}, false);
-
-tripPlannerTitle.addEventListener('focusout', (e) => {
-    localStorage.setItem('trip-planner-title', e.target.textContent);
-    }, false);
-document.addEventListener('DOMContentLoaded', () => {
-    if(localStorage.getItem('trip-planner-title')) {
-        tripPlannerTitle.textContent = localStorage.getItem('trip-planner-title');
-    }
-},false);
-
-document.addEventListener('DOMContentLoaded', SubdestinationList.displaySubdestination);
+document.addEventListener('DOMContentLoaded', TripPlanner.displaySubdestination);
 
 const clearLS = document.querySelector('.trip-planner__add-subdestination-input--clear');
 clearLS.addEventListener('click', clearLocalStorage);
-
-
-
-
-
 
 document.querySelector('.trip-planner__form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -74,15 +20,15 @@ document.querySelector('.trip-planner__form').addEventListener('submit', (e) => 
         console.log('Please fill in!');
     } else {
         const newSubDestination = new CreateSubDestination(subdestination);
-        SubdestinationList.addSubdestinationToList(newSubDestination);
+        TripPlanner.addSubdestinationToList(newSubDestination);
         SavedItems.addSubdestinationToLS(newSubDestination);
-        SubdestinationList.clearFields();
+        TripPlanner.clearFields();
     }
 });
 const subdestinationList = document.querySelector('.trip-planner__subdestination-list-container');
 
 subdestinationList.addEventListener('click', (e) => {
-    SubdestinationList.deleteSubdestination(e.target);
+    TripPlanner.deleteSubdestination(e.target);
 });
 
 const printBtn = document.querySelector('.btn__print');
@@ -91,9 +37,13 @@ printBtn.addEventListener('click', function() {
     window.print();
     }, false);
 
+Tabs.createTabs();
+Navigation.expandNavigation();
+TripPlanner.changeTitle();
 
 
-document.addEventListener('DOMContentLoaded', DestinationList.displayDestination);
+
+document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);
 
     // let item = null;
     //
