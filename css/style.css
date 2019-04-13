@@ -443,6 +443,12 @@ body {
       float: right; }
     .trip-planner__add-subdestination-input--clear {
       float: left; }
+  .trip-planner__destination-sort {
+    border: none;
+    color: var(--gray-light);
+    background-color: transparent; }
+    .trip-planner__destination-sort-label {
+      color: var(--teal-light); }
 
 .contact__input {
   height: 5.6rem;
@@ -931,8 +937,9 @@ body {
     justify-content: flex-end; }
   .trip-planner__form {
     display: block;
-    opacity: 1;
+    opacity: 0;
     width: 90%;
+    max-height: 0;
     color: var(--sandy);
     transition: .3s all; }
   .trip-planner__subdestination-list {
@@ -959,12 +966,12 @@ body {
         margin-top: 5rem; } }
     .trip-planner__destination-list-controls {
       display: flex;
-      justify-content: space-between;
-      align-content: center;
       align-items: center;
       margin-top: 3.5rem;
+      margin-bottom: 2rem;
       padding: 0;
-      border: none; }
+      border: none;
+      font-size: 1.6rem; }
   .trip-planner__destination--empty {
     display: flex;
     flex-direction: column;

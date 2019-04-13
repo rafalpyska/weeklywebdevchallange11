@@ -64,6 +64,14 @@
       }
     }
   }
+  &__destination-sort {
+    border: none;
+    color: var(--gray-light);
+    background-color: transparent;
+    &-label {
+      color: var(--teal-light);
+    }
+  }
 }
 .contact {
   &__input {

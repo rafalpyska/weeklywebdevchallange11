@@ -364,8 +364,9 @@
   }
   &__form {
     display: block;
-    opacity: 1;
+    opacity: 0;
     width: 90%;
+    max-height: 0;
     color: var(--sandy);
     transition: .3s all;
   }
@@ -402,12 +403,12 @@
       }
       &-controls {
         display: flex;
-        justify-content: space-between;
-        align-content: center;
         align-items: center;
         margin-top: 3.5rem;
+        margin-bottom: 2rem;
         padding: 0;
         border: none;
+        font-size: 1.6rem;
       }
     }
 

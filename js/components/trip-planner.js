@@ -1,5 +1,3 @@
-const tripPlanner= document.querySelector('.trip-planner');
-
 export class CreateSubDestination {
     constructor(subdestination) {
         this.subdestination = subdestination;
