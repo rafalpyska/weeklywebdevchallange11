@@ -5,7 +5,9 @@ import { CreateSubDestination, TripPlanner, SavedItems   } from "./components/tr
 import { DragDrop } from "./components/drag-drop.js";
 import { MutationObserve } from "./utilities/mutation-observer.js";
 
+document.addEventListener('DOMContentLoaded', TripPlanner.createTripPlanner);
 document.addEventListener('DOMContentLoaded', TripPlanner.displaySubdestination);
+document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);
 
 const clearLS = document.querySelector('.trip-planner__add-subdestination-input--clear');
 clearLS.addEventListener('click', clearLocalStorage);
@@ -45,4 +47,3 @@ MutationObserve.onChildAdd();
 
 
 
-document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);

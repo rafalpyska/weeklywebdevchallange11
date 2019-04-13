@@ -364,9 +364,8 @@
   }
   &__form {
     display: block;
-    opacity: 0;
+    opacity: 1;
     width: 90%;
-    max-height: 0;
     color: var(--sandy);
     transition: .3s all;
   }
