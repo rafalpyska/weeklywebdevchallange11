@@ -42,6 +42,7 @@ Navigation.expandNavigation();
 Tabs.createTabs();
 TripPlanner.changeTitle();
 TripPlanner.setDate();
+TripPlanner.sortList();
 DragDrop.init();
 MutationObserve.onChildAdd();
 

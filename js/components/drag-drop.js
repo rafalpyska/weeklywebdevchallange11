@@ -5,7 +5,7 @@ export class DragDrop {
             if(!scrollable) {
                 e.preventDefault();
             }
-        }
+        };
         document.addEventListener('touchmove', listener, { passive: false });
         dragula([
             document.getElementById('draggable2'),

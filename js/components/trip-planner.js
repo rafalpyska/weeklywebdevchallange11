@@ -117,19 +117,22 @@ export class TripPlanner {
                 place: 'Mt. Bromo',
                 time: '5 hours',
                 image: 'images/svg/mountains.svg',
-                id: 1
+                id: 1,
+                attr: 'mountain'
             },
             {
                 place: 'Mt. Semeru',
                 time: '3 hours',
                 image: 'images/svg/mountains.svg',
-                id: 2
+                id: 2,
+                attr: 'mountain'
             },
             {
                 place: 'Mt. Panderman',
                 time: '4 hours',
-                image: 'images/svg/mountains.svg',
-                id: 3
+                image: 'images/svg/island.svg',
+                id: 3,
+                attr: 'amusement'
             }
         ];
         const places = StoredDestination;
@@ -146,13 +149,14 @@ export class TripPlanner {
         div.setAttribute("data-value",`${destination.id}"`);
 
         div.setAttribute('draggable', 'true');
+        div.setAttribute('data-attr', `${destination.attr}`);
 
         div.innerHTML = `
                             <div class="trip-planner__destination-info" draggable="false">
                                 <h2 class="trip-planner__destination-info-heading">${destination.place}</h2>
                                 <p class="trip-planner__destination-info-paragraph">estimated time: <span class="heading-color">${destination.time}</span></p>
                             </div>
-                            <div class="trip-planner__destination-details" draggable="false">
+                            <div class="trip-planner__destination-details" draggable="false"">
                                 <object type="image/svg+xml" data="${destination.image}"></object>
                                 <a href="#" class="trip-planner__destination-details-link">view details</a>
                             </div>
@@ -160,6 +164,26 @@ export class TripPlanner {
             `;
         docFrag.appendChild(div);
         destinationList.appendChild(docFrag);
+    }
+    static sortList() {
+        const select = document.querySelector('.trip-planner__destination-sort');
+        const destinationList = document.querySelector('.trip-planner__destination-list');
+        const list = [];
+
+        destinationList.addEventListener('change', (e) => {
+            if(e.target.classList.contains('trip-planner__destination-sort')) {
+                const filled = document.querySelectorAll('.trip-planner__destination-list--filled');
+
+                filled.forEach((item) => {
+                    if(e.target.value === 'mountain') {
+                        if (item.dataset.attr === 'amusement') {
+
+                        }
+                    }
+                });
+            }
+        });
+
     }
 }
 export class SavedItems {
