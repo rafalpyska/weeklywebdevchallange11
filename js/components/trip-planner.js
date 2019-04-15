@@ -168,9 +168,8 @@ export class TripPlanner {
             }
 
         ];
-        const places = StoredDestination;
 
-        places.forEach((destination) => TripPlanner.addDestination(destination));
+        StoredDestination.forEach((destination) => TripPlanner.addDestination(destination));
     }
 
     static addDestination(destination) {

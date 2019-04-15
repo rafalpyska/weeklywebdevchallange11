@@ -23,7 +23,8 @@ tripPlannerBodyWrapper.addEventListener('submit', (e) => {
 
     const subdestination = document.querySelector('#add-subdestination-text').value;
 
-    let id = Math.floor(Math.random() * 100) + 1;
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let id = randomNumber.toString();
     if (subdestination === '') {
         console.log('Please fill in!');
     } else {
@@ -35,7 +36,7 @@ tripPlannerBodyWrapper.addEventListener('submit', (e) => {
 });
 tripPlannerBodyWrapper.addEventListener('click', (e) => {
     TripPlanner.deleteSubdestination(e.target);
-    SavedItems.removeSubdestinationFromLocalStorage(e.target.dataset.id);
+    SavedItems.removeSubdestinationFromLocalStorage(e.target.parentElement.dataset.id);
 });
 
 const printBtn = document.querySelector('.btn__print');
