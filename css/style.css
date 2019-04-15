@@ -312,6 +312,9 @@ body {
   width: 1px;
   white-space: nowrap; }
 
+.hidden {
+  display: none !important; }
+
 .btn {
   text-transform: uppercase;
   border: 0;

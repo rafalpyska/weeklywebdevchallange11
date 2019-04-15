@@ -174,11 +174,21 @@ export class TripPlanner {
             if(e.target.classList.contains('trip-planner__destination-sort')) {
                 const filled = document.querySelectorAll('.trip-planner__destination-list--filled');
 
-                filled.forEach((item) => {
+                [...filled].filter((item) => {
                     if(e.target.value === 'mountain') {
                         if (item.dataset.attr === 'amusement') {
-
+                            item.classList.add('hidden');
+                        } else {
+                            item.classList.remove('hidden');
                         }
+                    } else if(e.target.value === 'amusement') {
+                        if (item.dataset.attr === 'mountain') {
+                            item.classList.add('hidden');
+                        } else {
+                            item.classList.remove('hidden');
+                        }
+                    } else {
+                        item.classList.remove('hidden');
                     }
                 });
             }
