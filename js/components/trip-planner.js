@@ -6,7 +6,7 @@ export class CreateSubDestination {
 
 export class TripPlanner {
     static createTripPlanner() {
-        const tripPlannerContainer = document.querySelector('.trip-planner');
+        const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
         const tripPlannerControls = document.querySelector('.trip-planner__controls');
         const docFrag = document.createDocumentFragment();
         const tripPlannerBody = document.createElement('div');
@@ -40,7 +40,7 @@ export class TripPlanner {
                     </div>
          `;
         docFrag.appendChild(tripPlannerBody);
-        // tripPlannerContainer.insertBefore(docFrag, tripPlannerControls);
+        // tripPlannerBodyWrapper.appendChild(docFrag);
     }
     static changeTitle() {
         const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
@@ -130,10 +130,32 @@ export class TripPlanner {
             {
                 place: 'Mt. Panderman',
                 time: '4 hours',
-                image: 'images/svg/island.svg',
+                image: 'images/svg/mountain.svg',
                 id: 3,
+                attr: 'mountain'
+            },
+            {
+                place: 'Hawai Waterpark',
+                time: '1 hours',
+                image: 'images/svg/big-wheel.svg',
+                id: 4,
+                attr: 'amusement'
+            },
+            {
+                place: 'Malang Night Paradise',
+                time: '2 hours',
+                image: 'images/svg/big-wheel.svg',
+                id: 5,
+                attr: 'amusement'
+            },
+            {
+                place: 'Sengkaling Recreational Park',
+                time: '1.5 hours',
+                image: 'images/svg/big-wheel.svg',
+                id: 6,
                 attr: 'amusement'
             }
+
         ];
         const places = StoredDestination;
 
