@@ -1,13 +1,15 @@
+const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
+
 export class CreateSubDestination {
     constructor(subdestination) {
         this.subdestination = subdestination;
     }
+
 }
 
 export class TripPlanner {
     static createTripPlanner() {
         const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
-        const tripPlannerControls = document.querySelector('.trip-planner__controls');
         const docFrag = document.createDocumentFragment();
         const tripPlannerBody = document.createElement('div');
         tripPlannerBody.classList.add('trip-planner__body');
@@ -63,44 +65,25 @@ export class TripPlanner {
     }
 
     static setDate() {
-        const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
+        const datePicker = document.querySelector('.trip-planner__datepicker');
+        let now = new Date();
+        let day = ("0" + now.getDate()).slice(-2);
+        let month = ("0" + (now.getMonth() + 1)).slice(-2);
+        let today = now.getFullYear() + "-" + (month) + "-" + (day);
 
-        //     if(e.target.classList.contains('trip-planner__datepicker')) {
-        //         let now = new Date();
-        //
-        //         let day = ("0" + now.getDate()).slice(-2);
-        //         let month = ("0" + (now.getMonth() + 1)).slice(-2);
-        //
-        //         let today = now.getFullYear() + "-" + (month) + "-" + (day);
-        //
-        //         e.target.value = today;
-        //     }
+        datePicker.value = today;
 
         tripPlannerBodyWrapper.addEventListener('change', (e) => {
             if (e.target.classList.contains('trip-planner__datepicker')) {
                 localStorage.setItem('date', e.target.value);
             }
         });
-
-        // const datePicker = document.querySelector('.trip-planner__datepicker');
-        // let now = new Date();
-        //
-        // let day = ("0" + now.getDate()).slice(-2);
-        // let month = ("0" + (now.getMonth() + 1)).slice(-2);
-        //
-        // let today = now.getFullYear() + "-" + (month) + "-" + (day);
-        //
-        // datePicker.value = today;
-        //
-        // datePicker.addEventListener('focusout', (e) => {
-        //     localStorage.setItem('date', datePicker.value);
-        // }, false);
-        //
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     if (localStorage.getItem('date')) {
-        //         datePicker.value = localStorage.getItem('date');
-        //     }
-        // }, false);
+    }
+    static getDate() {
+        const datePicker = document.querySelector('.trip-planner__datepicker');
+        if (localStorage.getItem('date')) {
+            datePicker.value = localStorage.getItem('date');
+        }
     }
 
     static displaySubdestination() {
@@ -111,7 +94,7 @@ export class TripPlanner {
     static addSubdestinationToList(destination) {
 
         const listContainer = document.querySelector('.trip-planner__subdestination-list');
-        const docFrag = document.createDocumentFragment()
+        const docFrag = document.createDocumentFragment();
         const listItem = document.createElement('li');
         listItem.classList.add('trip-planner__subdestination-list-item');
         listItem.innerHTML = `
@@ -129,10 +112,6 @@ export class TripPlanner {
         if (element.classList.contains('btn__remove')) {
             element.parentElement.remove();
         }
-        const items = SavedItems.getSubdestination();
-        items.forEach((item, index) => {
-
-        })
     }
 
     static clearFields() {
@@ -159,7 +138,7 @@ export class TripPlanner {
             {
                 place: 'Mt. Panderman',
                 time: '4 hours',
-                image: 'images/svg/mountain.svg',
+                image: 'images/svg/mountains.svg',
                 id: 3,
                 attr: 'mountain'
             },
@@ -259,13 +238,13 @@ export class SavedItems {
         return subdestination;
     }
 
-    static addSubdestinationToLS(text) {
+    static addSubdestinationToLocalStorage(text) {
         const subdestination = SavedItems.getSubdestination();
         subdestination.push(text);
         localStorage.setItem('subdestination', JSON.stringify(subdestination));
     }
 
-    // static removeSubdestination() {
-    //     const items = SavedItems.getSubdestination();
-    // }
+    static removeSubdestinationFromLocalStorage() {
+        const items = SavedItems.getSubdestination();
+    }
 }
