@@ -1,8 +1,9 @@
 const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
 
 export class CreateSubDestination {
-    constructor(subdestination) {
+    constructor(subdestination, id) {
         this.subdestination = subdestination;
+        this.id = id;
     }
 
 }
@@ -93,10 +94,12 @@ export class TripPlanner {
 
     static addSubdestinationToList(destination) {
 
+
         const listContainer = document.querySelector('.trip-planner__subdestination-list');
         const docFrag = document.createDocumentFragment();
         const listItem = document.createElement('li');
         listItem.classList.add('trip-planner__subdestination-list-item');
+        listItem.setAttribute('data-id', `${destination.id}`);
         listItem.innerHTML = `
                 ${destination.subdestination}
             `;
@@ -244,7 +247,13 @@ export class SavedItems {
         localStorage.setItem('subdestination', JSON.stringify(subdestination));
     }
 
-    static removeSubdestinationFromLocalStorage() {
+    static removeSubdestinationFromLocalStorage(id) {
         const items = SavedItems.getSubdestination();
+        items.forEach((item, index) => {
+            if(item.id === id) {
+                items.splice(index, 1);
+            }
+        });
+        localStorage.setItem('subdestination', JSON.stringify(items));
     }
 }
