@@ -40,7 +40,7 @@ export class TripPlanner {
                     </div>
          `;
         docFrag.appendChild(tripPlannerBody);
-        // tripPlannerBodyWrapper.appendChild(docFrag);
+        tripPlannerBodyWrapper.appendChild(docFrag);
     }
     static changeTitle() {
         const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
@@ -61,31 +61,53 @@ export class TripPlanner {
         }, false);
 
     }
+
     static setDate() {
-        const datePicker = document.querySelector('.trip-planner__datepicker');
-        let now = new Date();
+        const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
 
-        let day = ("0" + now.getDate()).slice(-2);
-        let month = ("0" + (now.getMonth() + 1)).slice(-2);
+        //     if(e.target.classList.contains('trip-planner__datepicker')) {
+        //         let now = new Date();
+        //
+        //         let day = ("0" + now.getDate()).slice(-2);
+        //         let month = ("0" + (now.getMonth() + 1)).slice(-2);
+        //
+        //         let today = now.getFullYear() + "-" + (month) + "-" + (day);
+        //
+        //         e.target.value = today;
+        //     }
 
-        let today = now.getFullYear() + "-" + (month) + "-" + (day);
-
-        datePicker.value = today;
-
-        datePicker.addEventListener('focusout', (e) => {
-            localStorage.setItem('date', datePicker.value);
-        }, false);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('date')) {
-                datePicker.value = localStorage.getItem('date');
+        tripPlannerBodyWrapper.addEventListener('change', (e) => {
+            if (e.target.classList.contains('trip-planner__datepicker')) {
+                localStorage.setItem('date', e.target.value);
             }
-        }, false);
+        });
+
+        // const datePicker = document.querySelector('.trip-planner__datepicker');
+        // let now = new Date();
+        //
+        // let day = ("0" + now.getDate()).slice(-2);
+        // let month = ("0" + (now.getMonth() + 1)).slice(-2);
+        //
+        // let today = now.getFullYear() + "-" + (month) + "-" + (day);
+        //
+        // datePicker.value = today;
+        //
+        // datePicker.addEventListener('focusout', (e) => {
+        //     localStorage.setItem('date', datePicker.value);
+        // }, false);
+        //
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     if (localStorage.getItem('date')) {
+        //         datePicker.value = localStorage.getItem('date');
+        //     }
+        // }, false);
     }
+
     static displaySubdestination() {
         const subdestination = SavedItems.getSubdestination();
         subdestination.forEach((destination) => TripPlanner.addSubdestinationToList(destination));
     }
+
     static addSubdestinationToList(destination) {
 
         const listContainer = document.querySelector('.trip-planner__subdestination-list');
@@ -102,15 +124,22 @@ export class TripPlanner {
         docFrag.appendChild(listItem);
         listContainer.appendChild(docFrag);
     }
+
     static deleteSubdestination(element) {
-        if(element.classList.contains('btn__remove')) {
+        if (element.classList.contains('btn__remove')) {
             element.parentElement.remove();
         }
+        const items = SavedItems.getSubdestination();
+        items.forEach((item, index) => {
+
+        })
     }
+
     static clearFields() {
         const subdestination = document.querySelector('#add-subdestination-text');
         subdestination.value = '';
     }
+
     static displayDestination() {
         const StoredDestination = [
             {
@@ -161,14 +190,15 @@ export class TripPlanner {
 
         places.forEach((destination) => TripPlanner.addDestination(destination));
     }
+
     static addDestination(destination) {
         const destinationList = document.querySelector('.trip-planner__destination-list-items');
         const docFrag = document.createDocumentFragment();
 
         const div = document.createElement('div');
-        
+
         div.classList.add('trip-planner__destination', 'trip-planner__destination--filled', 'trip-planner__destination-list--filled');
-        div.setAttribute("data-value",`${destination.id}"`);
+        div.setAttribute("data-value", `${destination.id}"`);
 
         div.setAttribute('draggable', 'true');
         div.setAttribute('data-attr', `${destination.attr}`);
@@ -187,23 +217,22 @@ export class TripPlanner {
         docFrag.appendChild(div);
         destinationList.appendChild(docFrag);
     }
+
     static sortList() {
-        const select = document.querySelector('.trip-planner__destination-sort');
         const destinationList = document.querySelector('.trip-planner__destination-list');
-        const list = [];
 
         destinationList.addEventListener('change', (e) => {
-            if(e.target.classList.contains('trip-planner__destination-sort')) {
+            if (e.target.classList.contains('trip-planner__destination-sort')) {
                 const filled = document.querySelectorAll('.trip-planner__destination-list--filled');
 
                 [...filled].filter((item) => {
-                    if(e.target.value === 'mountain') {
+                    if (e.target.value === 'mountain') {
                         if (item.dataset.attr === 'amusement') {
                             item.classList.add('hidden');
                         } else {
                             item.classList.remove('hidden');
                         }
-                    } else if(e.target.value === 'amusement') {
+                    } else if (e.target.value === 'amusement') {
                         if (item.dataset.attr === 'mountain') {
                             item.classList.add('hidden');
                         } else {
@@ -218,19 +247,25 @@ export class TripPlanner {
 
     }
 }
+
 export class SavedItems {
     static getSubdestination() {
         let subdestination;
-        if(localStorage.getItem('subdestination') === null) {
+        if (localStorage.getItem('subdestination') === null) {
             subdestination = [];
         } else {
             subdestination = JSON.parse(localStorage.getItem('subdestination'));
         }
         return subdestination;
     }
+
     static addSubdestinationToLS(text) {
         const subdestination = SavedItems.getSubdestination();
         subdestination.push(text);
         localStorage.setItem('subdestination', JSON.stringify(subdestination));
     }
+
+    // static removeSubdestination() {
+    //     const items = SavedItems.getSubdestination();
+    // }
 }
