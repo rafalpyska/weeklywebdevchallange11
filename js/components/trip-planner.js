@@ -201,26 +201,29 @@ export class TripPlanner {
 
     static sortList() {
         const destinationList = document.querySelector('.trip-planner__destination-list');
+        const destinationListItems = document.querySelector('.trip-planner__destination-list-items');
 
         destinationList.addEventListener('change', (e) => {
             if (e.target.classList.contains('trip-planner__destination-sort')) {
                 const filled = document.querySelectorAll('.trip-planner__destination-list--filled');
 
                 [...filled].filter((item) => {
-                    if (e.target.value === 'mountain') {
-                        if (item.dataset.attr === 'amusement') {
-                            item.classList.add('hidden');
+                    if(item.parentNode == destinationListItems) {
+                        if (e.target.value === 'mountain') {
+                            if (item.dataset.attr === 'amusement') {
+                                item.classList.add('hidden');
+                            } else {
+                                item.classList.remove('hidden');
+                            }
+                        } else if (e.target.value === 'amusement') {
+                            if (item.dataset.attr === 'mountain') {
+                                item.classList.add('hidden');
+                            } else {
+                                item.classList.remove('hidden');
+                            }
                         } else {
                             item.classList.remove('hidden');
                         }
-                    } else if (e.target.value === 'amusement') {
-                        if (item.dataset.attr === 'mountain') {
-                            item.classList.add('hidden');
-                        } else {
-                            item.classList.remove('hidden');
-                        }
-                    } else {
-                        item.classList.remove('hidden');
                     }
                 });
             }
