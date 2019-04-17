@@ -185,15 +185,14 @@ export class TripPlanner {
         div.setAttribute('data-attr', `${destination.attr}`);
 
         div.innerHTML = `
-                            <div class="trip-planner__destination-info" draggable="false">
-                                <h2 class="trip-planner__destination-info-heading">${destination.place}</h2>
-                                <p class="trip-planner__destination-info-paragraph">estimated time: <span class="heading-color">${destination.time}</span></p>
-                            </div>
-                            <div class="trip-planner__destination-details" draggable="false"">
-                                <object type="image/svg+xml" data="${destination.image}"></object>
-                                <a href="#" class="trip-planner__destination-details-link">view details</a>
-                            </div>
-                        </div>
+                    <div class="trip-planner__destination-info" draggable="false">
+                        <h2 class="trip-planner__destination-info-heading">${destination.place}</h2>
+                        <p class="trip-planner__destination-info-paragraph">estimated time: <span class="heading-color">${destination.time}</span></p>
+                    </div>
+                    <div class="trip-planner__destination-details" draggable="false"">
+                       <object type="image/svg+xml" data="${destination.image}"></object>
+                       <a href="#" class="trip-planner__destination-details-link">view details</a>
+                    </div>
             `;
         docFrag.appendChild(div);
         destinationList.appendChild(docFrag);

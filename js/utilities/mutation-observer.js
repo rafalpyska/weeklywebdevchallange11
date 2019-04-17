@@ -1,3 +1,5 @@
+import { TripPlanner } from "../components/trip-planner.js";
+
 export class MutationObserve {
     static onChildAdd() {
         const empty = document.querySelector('.trip-planner__destination--empty');
