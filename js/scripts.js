@@ -1,4 +1,5 @@
 import {clearLocalStorage} from "./utilities/utils.js";
+import {randomNumberRange} from "./utilities/utils.js";
 import {Navigation} from "./components/expand-navigation.js";
 import {Tabs} from "./components/tabs.js";
 import {CreateSubDestination, TripPlanner, SavedItems} from "./components/trip-planner.js";
@@ -21,14 +22,12 @@ tripPlannerBodyWrapper.addEventListener('click', clearLocalStorage);
 tripPlannerBodyWrapper.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const subdestination = document.querySelector('#add-subdestination-text').value;
+    const  subdestination = document.querySelector('#add-subdestination-text').value;
 
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let id = randomNumber.toString();
     if (subdestination === '') {
         console.log('Please fill in!');
     } else {
-        const newSubDestination = new CreateSubDestination(subdestination, id);
+        const newSubDestination = new CreateSubDestination(subdestination, randomNumberRange(1, 100));
         TripPlanner.addSubdestinationToList(newSubDestination);
         SavedItems.addSubdestinationToLocalStorage(newSubDestination);
         TripPlanner.clearFields();
