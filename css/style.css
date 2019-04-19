@@ -316,6 +316,10 @@ body {
 .hidden {
   display: none !important; }
 
+.visible {
+  opacity: 1 !important;
+  max-height: 100% !important; }
+
 .disabled {
   pointer-events: none !important; }
 
@@ -944,7 +948,9 @@ body {
     justify-content: flex-end; }
   .trip-planner__form {
     display: block;
+    opacity: 0;
     width: 90%;
+    max-height: 0;
     color: var(--sandy);
     transition: .3s all; }
   .trip-planner__subdestination-list {

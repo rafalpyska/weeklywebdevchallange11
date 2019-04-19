@@ -13,6 +13,10 @@
 .hidden {
   display: none!important;
 }
+.visible {
+  opacity: 1!important;
+  max-height: 100%!important;
+}
 .disabled {
   pointer-events: none!important;
 }
