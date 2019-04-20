@@ -27,7 +27,7 @@ tripPlannerBodyWrapper.addEventListener('submit', (e) => {
     if (subdestination === '') {
         console.log('Please fill in!');
     } else {
-        const newSubDestination = new TripPlanner(subdestination, randomNumberRange(1, 100), this.setDate());
+        const newSubDestination = new TripPlanner(subdestination, randomNumberRange(1, 100));
         TripPlanner.addSubdestinationToList(newSubDestination);
         SavedItems.addSubdestinationToLocalStorage(newSubDestination);
         TripPlanner.clearFields();
