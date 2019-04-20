@@ -11,7 +11,15 @@ export class DragDrop {
         let drake = dragula([
             document.getElementById('draggable2'),
             document.getElementById('draggable1')
-        ]).on('drag', function (el, source) {
+        ], {
+            moves: function(el, source, handle, sibling) {
+                if(el.getAttribute('draggable', 'true')) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }).on('drag', function (el, source) {
             scrollable = false;
         }).on('drop', function (el, target, source, sibling) {
             scrollable = true;
@@ -20,9 +28,22 @@ export class DragDrop {
             } else {
                 el.style.margin = '1.5rem';
             }
-            if (target.id === 'draggable2' && target.childElementCount > 1) {
-                drake.cancel(true);
-            }
+            // if (target.id === 'draggable2' && target.childElementCount > 1) {
+            //     drake.cancel(true);
+            //     console.log(source.children);
+            // }
+            // if(target.id === 'draggable2' && target.childElementCount === 1) {
+            //     let sourceItems = source.children;
+            //     [...sourceItems].forEach((item) => {
+            //        item.removeAttribute('draggable');
+            //     });
+            // }
+            // if(target.id === 'draggable1') {
+            //     let sourceItems = source.children;
+            //     [...sourceItems].forEach((item) => {
+            //         item.setAttribute('draggable', 'true');
+            //     });
+            // }
         }).on('dragend', function (el, source) {
             scrollable = true;
         });

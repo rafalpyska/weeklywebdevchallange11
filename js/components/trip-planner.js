@@ -1,14 +1,10 @@
 const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
 
-export class CreateSubDestination {
+export class TripPlanner {
     constructor(subdestination, id) {
         this.subdestination = subdestination;
         this.id = id;
     }
-
-}
-
-export class TripPlanner {
     static createTripPlanner() {
         const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
         const docFrag = document.createDocumentFragment();
@@ -93,8 +89,6 @@ export class TripPlanner {
     }
 
     static addSubdestinationToList(destination) {
-
-
         const listContainer = document.querySelector('.trip-planner__subdestination-list');
         const docFrag = document.createDocumentFragment();
         const listItem = document.createElement('li');
@@ -185,11 +179,11 @@ export class TripPlanner {
         div.setAttribute('data-attr', `${destination.attr}`);
 
         div.innerHTML = `
-                    <div class="trip-planner__destination-info" draggable="false">
+                    <div class="trip-planner__destination-info">
                         <h2 class="trip-planner__destination-info-heading">${destination.place}</h2>
                         <p class="trip-planner__destination-info-paragraph">estimated time: <span class="heading-color">${destination.time}</span></p>
                     </div>
-                    <div class="trip-planner__destination-details" draggable="false"">
+                    <div class="trip-planner__destination-details">
                        <object type="image/svg+xml" data="${destination.image}"></object>
                        <a href="#" class="trip-planner__destination-details-link">view details</a>
                     </div>

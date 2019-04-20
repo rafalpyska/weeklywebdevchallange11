@@ -2,7 +2,7 @@ import {clearLocalStorage} from "./utilities/utils.js";
 import {randomNumberRange} from "./utilities/utils.js";
 import {Navigation} from "./components/expand-navigation.js";
 import {Tabs} from "./components/tabs.js";
-import {CreateSubDestination, TripPlanner, SavedItems} from "./components/trip-planner.js";
+import {TripPlanner, SavedItems} from "./components/trip-planner.js";
 import {DragDrop} from "./components/drag-drop.js";
 import {MutationObserve} from "./utilities/mutation-observer.js";
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);
 document.addEventListener('DOMContentLoaded', TripPlanner.setDate);
 document.addEventListener('DOMContentLoaded', TripPlanner.getDate);
 document.addEventListener('DOMContentLoaded', DragDrop.init);
-document.addEventListener('DOMContentLoaded', MutationObserve.onChildAdd);
+// document.addEventListener('DOMContentLoaded', MutationObserve.onChildAdd);
 
 tripPlannerBodyWrapper.addEventListener('click', clearLocalStorage);
 
@@ -27,7 +27,7 @@ tripPlannerBodyWrapper.addEventListener('submit', (e) => {
     if (subdestination === '') {
         console.log('Please fill in!');
     } else {
-        const newSubDestination = new CreateSubDestination(subdestination, randomNumberRange(1, 100));
+        const newSubDestination = new TripPlanner(subdestination, randomNumberRange(1, 100), this.setDate());
         TripPlanner.addSubdestinationToList(newSubDestination);
         SavedItems.addSubdestinationToLocalStorage(newSubDestination);
         TripPlanner.clearFields();
