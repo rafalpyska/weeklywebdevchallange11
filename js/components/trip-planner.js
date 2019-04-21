@@ -173,6 +173,7 @@ export class TripPlanner {
         const div = document.createElement('div');
 
         div.classList.add('trip-planner__destination', 'trip-planner__destination--filled', 'trip-planner__destination-list--filled');
+        div.id = `item${destination.id}`;
         div.setAttribute("data-value", `${destination.id}"`);
 
         div.setAttribute('draggable', 'true');

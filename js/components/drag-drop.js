@@ -6,6 +6,27 @@ export class DragDrop {
                 e.preventDefault();
             }
         };
+        let store = [];
+        let nodesArray = document.querySelectorAll('.trip-planner__destination-list-items > div');
+        nodesArray = [...nodesArray].filter((e) => {
+            return store.map(function(d) { return d['element']; }).indexOf(e.id) === -1;
+        }).forEach( (e) => {
+            store.push({'element':e.id, 'container': 'draggable1'});
+        });
+        if(localStorage.getItem('store')) {
+            store = JSON.parse(localStorage.getItem('store'));
+        }
+
+        store.forEach((obj) => {
+            document.getElementById(obj.container).appendChild(document.getElementById(obj.element));
+        });
+        if (document.getElementById('draggable2').childElementCount) {
+            document.querySelector('#draggable2 > div').style.margin = '0';
+            document.querySelectorAll('#draggable1 > div').forEach((item) => {
+                item.removeAttribute('draggable');
+            })
+
+        }
         document.addEventListener('touchmove', listener, {passive: false});
         const form = document.querySelector('.trip-planner__form');
         let drake = dragula([
@@ -21,29 +42,39 @@ export class DragDrop {
             }
         }).on('drag', function (el, source) {
             scrollable = false;
+            el.classList.add('drag');
         }).on('drop', function (el, target, source, sibling) {
             scrollable = true;
-            if (target.id === 'draggable2') {
-                el.style.margin = '0';
+            el.classList.remove('drag');
+            if (document.getElementById('draggable2').childElementCount === 1) {
+                document.querySelector('#draggable2 > div').style.margin = '0';
             } else {
                 el.style.margin = '1.5rem';
             }
-            // if (target.id === 'draggable2' && target.childElementCount > 1) {
-            //     drake.cancel(true);
-            //     console.log(source.children);
-            // }
-            // if(target.id === 'draggable2' && target.childElementCount === 1) {
-            //     let sourceItems = source.children;
-            //     [...sourceItems].forEach((item) => {
-            //        item.removeAttribute('draggable');
-            //     });
-            // }
-            // if(target.id === 'draggable1') {
-            //     let sourceItems = source.children;
-            //     [...sourceItems].forEach((item) => {
-            //         item.setAttribute('draggable', 'true');
-            //     });
-            // }
+            if(target.id === 'draggable2' && target.childElementCount === 1) {
+                let sourceItems = source.children;
+                [...sourceItems].forEach((item) => {
+                   item.removeAttribute('draggable');
+                });
+            }
+            if(target.id === 'draggable1') {
+                let sourceItems = target.children;
+                [...sourceItems].forEach((item) => {
+                    item.setAttribute('draggable', 'true');
+                });
+            }
+            let indexEl = store.map(function(d) { return d['element']; }).indexOf(el.id);
+            if (indexEl>-1)
+                store.splice(indexEl, 1);
+
+            let indexDrop = store.length;
+            if(sibling) {
+                indexDrop = store.map((d) => { return d['element']; }).indexOf(sibling.id);
+            }
+
+            store.splice(indexDrop, 0, {'element': el.id, 'container': target.id});
+
+            localStorage.setItem('store', JSON.stringify(store));
         }).on('dragend', function (el, source) {
             scrollable = true;
         });

@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', TripPlanner.displaySubdestination)
 document.addEventListener('DOMContentLoaded', TripPlanner.displayDestination);
 document.addEventListener('DOMContentLoaded', TripPlanner.setDate);
 document.addEventListener('DOMContentLoaded', TripPlanner.getDate);
+document.addEventListener('DOMContentLoaded', MutationObserve.onChildAdd);
 document.addEventListener('DOMContentLoaded', DragDrop.init);
-// document.addEventListener('DOMContentLoaded', MutationObserve.onChildAdd);
 
 tripPlannerBodyWrapper.addEventListener('click', clearLocalStorage);
 

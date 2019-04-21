@@ -6,7 +6,6 @@ export function clearLocalStorage() {
             window.location.reload();
         }
     });
-
 }
 
 export function randomNumberRange(min, max) {

@@ -364,9 +364,9 @@
   }
   &__form {
     display: block;
-    //opacity: 0;
+    opacity: 0;
     width: 90%;
-    //max-height: 0;
+    max-height: 0;
     color: var(--sandy);
     transition: .3s all;
   }
@@ -442,6 +442,8 @@
       border: 1px solid var(--gray-light);
       border-radius: .75rem;
       cursor: pointer;
+      opacity: 1;
+      transition: .3s all;
     }
     &-info {
       margin-right: auto;

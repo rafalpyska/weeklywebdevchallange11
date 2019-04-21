@@ -7,7 +7,9 @@ export class MutationObserve {
             mutations.forEach((mutation) => {
                 if(mutation.addedNodes.length === 1) {
                     form.classList.add('visible');
-                    mutationObserver.disconnect();
+                }
+                if(mutation.removedNodes.length) {
+                    form.classList.remove('visible');
                 }
             });
         });
