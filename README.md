@@ -1,7 +1,6 @@
 # Weekly Web Dev Challange 11
 
-## Technologies
-**YokNgalam** was created using:
+## Technologies used to create YokNgalam
 
 - HTML/CSS (RWD, SASS, Flexbox, Grid)
 - Javascript (ES6 features)
