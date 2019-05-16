@@ -26,6 +26,10 @@
   transition: .3s all!important;
 }
 
+.touch-action-none {
+  touch-action: none;
+}
+
 .error {
   color: red;
   font-weight: 700;

@@ -327,6 +327,9 @@ body {
   opacity: 0.5 !important;
   transition: 0.3s all !important; }
 
+.touch-action-none {
+  touch-action: none; }
+
 .error {
   color: red;
   font-weight: 700; }

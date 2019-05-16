@@ -41,12 +41,12 @@ export class DragDrop {
                 }
             }
         }).on('drag', function (el, source) {
-            el.style.touchAction = 'none';
             scrollable = false;
-            el.classList.add('drag');
+            el.classList.add('drag', 'touch-action-none');
         }).on('drop', function (el, target, source, sibling) {
             scrollable = true;
             el.classList.remove('drag');
+            el.classList.add('touch-action-none');
             if (document.getElementById('draggable2').childElementCount === 1) {
                 document.querySelector('#draggable2 > div').style.margin = '0';
             } else {
