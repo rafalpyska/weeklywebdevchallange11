@@ -41,7 +41,7 @@ export class DragDrop {
                 }
             }
         }).on('drag', function (el, source) {
-            touch-action: none;
+            el.style.touchAction = 'none';
             scrollable = false;
             el.classList.add('drag');
         }).on('drop', function (el, target, source, sibling) {
