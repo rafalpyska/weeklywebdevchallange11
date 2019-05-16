@@ -327,6 +327,10 @@ body {
   opacity: 0.5 !important;
   transition: 0.3s all !important; }
 
+.error {
+  color: red;
+  font-weight: 700; }
+
 .btn {
   text-transform: uppercase;
   border: 0;
@@ -1031,11 +1035,10 @@ body {
   flex-wrap: wrap;
   position: relative;
   padding: 6rem 13.5rem;
-  background: url("../images/map.jpg");
-  background-position: 100% 100%; }
+  background: url("../images/map.jpg") 100% 100%; }
   @media only screen and (min-width: 175em) {
     .contact {
-      padding: 0 71.5rem; } }
+      padding: 6rem 71.5rem; } }
   @media only screen and (max-width: 50em) {
     .contact {
       flex-direction: column;

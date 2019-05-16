@@ -36,6 +36,7 @@ export class TripPlanner {
                             <input type="submit" value="clear all fields" class="trip-planner__add-subdestination-input trip-planner__add-subdestination-input--clear">
 
                         </form>
+                        <p class="error hidden">Please fill in!</p>
                     </div>
          `;
         docFrag.appendChild(tripPlannerBody);

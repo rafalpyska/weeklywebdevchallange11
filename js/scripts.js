@@ -23,10 +23,11 @@ tripPlannerBodyWrapper.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const  subdestination = document.querySelector('#add-subdestination-text').value;
-
+    const errorPlanner = document.querySelector('.error');
     if (subdestination === '') {
-        console.log('Please fill in!');
+        errorPlanner.classList.remove('hidden');
     } else {
+        errorPlanner.classList.add('hidden');
         const newSubDestination = new TripPlanner(subdestination, randomNumberRange(1, 100));
         TripPlanner.addSubdestinationToList(newSubDestination);
         SavedItems.addSubdestinationToLocalStorage(newSubDestination);
