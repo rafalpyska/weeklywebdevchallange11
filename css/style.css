@@ -564,7 +564,7 @@ body {
   .nav__item {
     display: flex;
     align-items: center;
-    padding: 0 2rem; }
+    padding: .5rem 2rem; }
     .nav__item:not(:last-child) {
       margin-right: 1.5rem; }
     .nav__item.active {

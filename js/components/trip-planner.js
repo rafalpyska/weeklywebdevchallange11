@@ -5,6 +5,7 @@ export class TripPlanner {
         this.subdestination = subdestination;
         this.id = id;
     }
+
     static createTripPlanner() {
         const tripPlannerBodyWrapper = document.querySelector('.trip-planner__body-wrapper');
         const docFrag = document.createDocumentFragment();
@@ -42,6 +43,7 @@ export class TripPlanner {
         docFrag.appendChild(tripPlannerBody);
         tripPlannerBodyWrapper.appendChild(docFrag);
     }
+
     static changeTitle() {
         const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
 
@@ -77,6 +79,7 @@ export class TripPlanner {
             }
         });
     }
+
     static getDate() {
         const datePicker = document.querySelector('.trip-planner__datepicker');
         if (localStorage.getItem('date')) {
@@ -203,22 +206,12 @@ export class TripPlanner {
                 const filled = document.querySelectorAll('.trip-planner__destination-list--filled');
 
                 [...filled].filter((item) => {
-                    if(item.parentNode == destinationListItems) {
-                        if (e.target.value === 'mountain') {
-                            if (item.dataset.attr === 'amusement') {
-                                item.classList.add('hidden');
-                            } else {
-                                item.classList.remove('hidden');
-                            }
-                        } else if (e.target.value === 'amusement') {
-                            if (item.dataset.attr === 'mountain') {
-                                item.classList.add('hidden');
-                            } else {
-                                item.classList.remove('hidden');
-                            }
-                        } else {
-                            item.classList.remove('hidden');
-                        }
+                    if (e.target.value === item.dataset.attr) {
+                        item.classList.remove('hidden');
+                    } else if (e.target.value === 'all') {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
                     }
                 });
             }
@@ -247,7 +240,7 @@ export class SavedItems {
     static removeSubdestinationFromLocalStorage(id) {
         const items = SavedItems.getSubdestination();
         items.forEach((item, index) => {
-            if(item.id === id) {
+            if (item.id === id) {
                 items.splice(index, 1);
             }
         });
