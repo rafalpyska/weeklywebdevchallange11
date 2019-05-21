@@ -538,22 +538,12 @@ body {
     @media only screen and (max-width: 50em) {
       .nav__toggle {
         display: flex;
-        font-size: 6.08rem;
-        position: relative;
+        background: url("../images/svg/menu.svg") no-repeat top left;
+        background-size: contain;
         width: 3rem;
-        height: 1.5rem;
+        height: 3rem;
         border: 0;
-        border-top: 1px solid var(--black);
-        background: transparent;
-        cursor: pointer; }
-        .nav__toggle::before, .nav__toggle::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          width: 100%;
-          border-top: 1px solid var(--black); }
-        .nav__toggle::after {
-          top: -.75rem; } }
+        cursor: pointer; } }
   .nav__list {
     display: flex;
     flex-wrap: wrap;

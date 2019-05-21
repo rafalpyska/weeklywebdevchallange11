@@ -13,25 +13,12 @@
     display: none;
     @include respond(phone) {
       display: flex;
-      font-size: 6.08rem;
-      position: relative;
+      background: url('../images/svg/menu.svg') no-repeat top left;
+      background-size: contain;
       width: 3rem;
-      height: 1.5rem;
+      height: 3rem;
       border: 0;
-      border-top: 1px solid var(--black);
-      background: transparent;
       cursor: pointer;
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        border-top: 1px solid var(--black);
-      }
-      &::after {
-        top: -.75rem;
-      }
     }
   }
   &__list {
