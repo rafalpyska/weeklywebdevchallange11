@@ -199,7 +199,6 @@ export class TripPlanner {
 
     static sortList() {
         const destinationList = document.querySelector('.trip-planner__destination-list');
-        const destinationListItems = document.querySelector('.trip-planner__destination-list-items');
 
         destinationList.addEventListener('change', (e) => {
             if (e.target.classList.contains('trip-planner__destination-sort')) {
