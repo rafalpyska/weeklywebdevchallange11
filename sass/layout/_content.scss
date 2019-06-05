@@ -128,12 +128,13 @@
       color: var(--gray-light);
       background-color: transparent;
       border: 0;
+      cursor: pointer;
       transition: .3s all;
       &:hover {
         color: var(--teal-dark);
       }
     }
-    &__link:hover .offer-info__icon-path {
+    &__button:hover .offer-info__icon-path {
       fill: var(--teal-dark);
     }
     &__icon {

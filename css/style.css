@@ -797,10 +797,11 @@ body {
     color: var(--gray-light);
     background-color: transparent;
     border: 0;
+    cursor: pointer;
     transition: .3s all; }
     .offer-info__button:hover {
       color: var(--teal-dark); }
-  .offer-info__link:hover .offer-info__icon-path {
+  .offer-info__button:hover .offer-info__icon-path {
     fill: var(--teal-dark); }
   .offer-info__icon {
     margin-right: 1rem; }
