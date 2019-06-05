@@ -1,7 +1,7 @@
 {
-  "name": "weeklywebdevchallange1",
+  "name": "weeklywebdevchallange11",
   "version": "1.0.0",
-  "description": "Weekly Web Dev Challange 1",
+  "description": "Weekly Web Dev Challange 11",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

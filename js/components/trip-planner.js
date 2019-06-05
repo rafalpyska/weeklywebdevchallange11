@@ -11,7 +11,6 @@ export class TripPlanner {
         const docFrag = document.createDocumentFragment();
         const tripPlannerBody = document.createElement('div');
         tripPlannerBody.classList.add('trip-planner__body');
-
         tripPlannerBody.innerHTML = `
    
                    <div class="trip-planner__date">
@@ -48,6 +47,7 @@ export class TripPlanner {
         const tripPlannerTitle = document.querySelector('.trip-planner__heading-title');
 
         tripPlannerTitle.addEventListener('keydown', (e) => {
+            // e.key (not supported in older browser)
             if (e.keyCode === 13) {
                 e.preventDefault();
             }

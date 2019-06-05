@@ -121,12 +121,13 @@
     }
   }
   &-info {
-    &__link:link,
-    &__link:visited {
+    &__button {
       display: flex;
       align-items: center;
       font-size: 1.6rem;
       color: var(--gray-light);
+      background-color: transparent;
+      border: 0;
       transition: .3s all;
       &:hover {
         color: var(--teal-dark);
@@ -350,7 +351,6 @@
     border-top-right-radius: .75rem;
   }
   &__body {
-    margin-bottom: 1.5rem;
     padding: 3rem 4rem;
     background-color: var(--yellow);
   }
@@ -361,6 +361,7 @@
   &__controls {
     display: flex;
     justify-content: flex-end;
+    margin-top: 1.5rem;
   }
   &__form {
     display: block;

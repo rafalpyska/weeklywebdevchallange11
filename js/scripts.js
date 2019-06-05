@@ -1,6 +1,7 @@
 import {clearLocalStorage} from "./utilities/utils.js";
 import {randomNumberRange} from "./utilities/utils.js";
 import {Navigation} from "./components/expand-navigation.js";
+import {Modal} from "./components/modal.js";
 import {Tabs} from "./components/tabs.js";
 import {TripPlanner, SavedItems} from "./components/trip-planner.js";
 import {DragDrop} from "./components/drag-drop.js";
@@ -17,11 +18,8 @@ document.addEventListener('DOMContentLoaded', MutationObserve.onChildAdd);
 document.addEventListener('DOMContentLoaded', DragDrop.init);
 
 tripPlannerBodyWrapper.addEventListener('click', clearLocalStorage);
-
-
 tripPlannerBodyWrapper.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const  subdestination = document.querySelector('#add-subdestination-text').value;
     const errorPlanner = document.querySelector('.error');
     if (subdestination === '') {
@@ -46,6 +44,7 @@ printBtn.addEventListener('click', function () {
 }, false);
 
 Navigation.expandNavigation();
+Modal.showModal();
 Tabs.createTabs();
 TripPlanner.changeTitle();
 TripPlanner.sortList();

@@ -10,7 +10,7 @@
   white-space: nowrap;
 }
 
-.hidden {
+.hidden{
   display: none!important;
 }
 .visible {
@@ -28,6 +28,10 @@
 
 .touch-action-none {
   touch-action: none;
+}
+
+.dflex {
+  display: flex!important;
 }
 
 .error {
