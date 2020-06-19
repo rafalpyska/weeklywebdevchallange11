@@ -1,10 +1,7 @@
 .header {
   background: url('../images/header.jpg') no-repeat center;
   background-size: cover;
-  @include respond(desktop-ultrahd) {
-    background-size: contain;
-    background-color: var(--teal-transparent);
-  }
+  background-position: bottom;
   &__info {
     display: flex;
     flex-direction: column;

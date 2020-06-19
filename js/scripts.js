@@ -2,6 +2,7 @@ import {clearLocalStorage} from "./utilities/utils.js";
 import {randomNumberRange} from "./utilities/utils.js";
 import {Navigation} from "./components/expand-navigation.js";
 import {Modal} from "./components/modal.js";
+import {Search} from "./components/search.js";
 import {Tabs} from "./components/tabs.js";
 import {TripPlanner, SavedItems} from "./components/trip-planner.js";
 import {DragDrop} from "./components/drag-drop.js";
@@ -45,6 +46,7 @@ printBtn.addEventListener('click', function () {
 
 Navigation.expandNavigation();
 Modal.showModal();
+Search.filterDestination();
 Tabs.createTabs();
 TripPlanner.changeTitle();
 TripPlanner.sortList();

@@ -24,6 +24,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     list-style-type: none;
     @include respond(phone) {
       opacity: 0;
@@ -47,7 +48,7 @@
     align-items: center;
     padding: .5rem 2rem;
     &:not(:last-child) {
-      margin-right: 1.5rem;
+      margin-right: 1.25rem;
     }
     &.active {
       border: 2px solid var(--white);

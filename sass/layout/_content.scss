@@ -156,11 +156,19 @@
   }
   &-city {
     &-list {
-      display: none;
+      //display: none;
+      //grid-gap: 3rem;
+      //grid-template-columns: repeat(12, 1fr);
+      //grid-template-rows: 51.5rem auto;
+      //padding: 0 13.5rem;
+      visibility: hidden;
+      opacity: 0;
       grid-gap: 3rem;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 51.5rem auto;
       padding: 0 13.5rem;
+      max-height: 0;
+      transition: .3s opacity;
       @include respond(desktop-ultrahd) {
         padding: 0 71.5rem;
       }
@@ -176,8 +184,15 @@
       @include respond(phone-small) {
         padding: 0 4.5rem;
       }
+      //&--active {
+      //  display: grid;
+      //}
+
       &--active {
         display: grid;
+        visibility: visible;
+        opacity: 1;
+        max-height: 10000px;
       }
       &__link {
         display: flex;
@@ -231,6 +246,7 @@
         justify-content: space-between;
         background: url('../images/image2.jpg');
         background-size: 100% 100%;
+        min-height: 44rem;
         @include respond(phone) {
           background-size: cover;
         }
@@ -254,7 +270,9 @@
     }
   }
   &-overlay {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: rgba(255, 255, 255, .95);
     padding: 6rem 6rem 0 5rem;
     @include respond(desktop) {
@@ -346,6 +364,7 @@
   &__title {
     padding: 3rem 0;
     background-color: var(--teal-light);
+    background-image: url('../images/svg/title-background.svg');
     text-align: center;
     color: var(--white);
     border-top-left-radius: .75rem;
@@ -453,8 +472,10 @@
     &-details {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       &-link:link,
       &-link:visited {
+        margin-top: .5em;
         font-size: 1.4rem;
         color: var(--teal-dark);
       }
@@ -562,9 +583,12 @@
       margin-left: 0;
       padding: 3rem;
     }
-
     & > * {
       transform: skewX(-20deg);
+    }
+    &-controls {
+      display: flex;
+      border: 1px solid var(--gray-light);
     }
   }
 }
