@@ -1,9 +1,9 @@
 :root {
-  --transparent: rgba(255, 255, 255, .8);
+  --transparent: rgba(255, 255, 255, 0.8);
   --white: rgba(255, 255, 255, 1);
   --black: rgba(0, 0, 0, 1);
   --teal-dark: rgba(1, 162, 166, 1);
-  --teal-transparent: rgba(1, 162, 166, .7);
+  --teal-transparent: rgba(1, 162, 166, 0.7);
   --teal-light: rgba(41, 217, 194, 1);
   --yellow: rgba(255, 255, 166, 1);
   --yellow-dark: rgba(245, 233, 158, 1);
@@ -31,13 +31,12 @@ html {
   @include respond(tab-land-big) {
     font-size: 50.5%;
   }
-    @include respond(tab-land-small) {
+  @include respond(tab-land-small) {
     font-size: 43.5%;
   }
-    @include respond(tab-land-port) {
+  @include respond(tab-land-port) {
     font-size: 43.5%;
   }
-
 }
 
 body {
@@ -123,7 +122,8 @@ textarea {
 }
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
